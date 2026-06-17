@@ -28,6 +28,62 @@ if ( !function_exists( 'theme_post_thumbnail' ) ) {
         <?php
     }
 }
+if ( !function_exists( 'theme_post_item_thumbnail' ) ) {
+    function theme_post_item_thumbnail( $post_id, $width, $height, $placeholder = true )
+    {
+        $width  = apply_filters( 'theme_post_thumbnail_width', $width );
+        $height = apply_filters( 'theme_post_thumbnail_height', $height );
+        ?>
+        <div class="post-thumb">
+            <a href="<?php echo theme_post_link(); ?>" class="thumb-link">
+                <figure>
+                    <?php
+                    $thumb = theme_resize_image( get_post_thumbnail_id( $post_id ), $width, $height, true, true, $placeholder );
+                    echo wp_specialchars_decode( $thumb['img'] );
+                    ?>
+                </figure>
+            </a>
+        </div>
+        <?php
+    }
+}
+if ( !function_exists( 'theme_post_thumbnail_single' ) ) {
+    function theme_post_thumbnail_single( $width = false, $height = false, $placeholder = true, $class = '' )
+    {
+        ?>
+        <div class="post-thumb">
+            <figure>
+                <?php
+                $thumb = theme_resize_image( get_post_thumbnail_id(), $width, $height, true, true, $placeholder, $class );
+                echo wp_specialchars_decode( $thumb['img'] );
+                ?>
+            </figure>
+        </div>
+        <?php
+    }
+}
+if ( !function_exists( 'theme_post_thumbnail_standard' ) ) {
+    function theme_post_thumbnail_standard( $width, $height )
+    {
+        $width  = apply_filters( 'theme_post_thumbnail_width', $width );
+        $height = apply_filters( 'theme_post_thumbnail_height', $height );
+        ?>
+        <div class="post-thumb">
+            <a href="<?php echo theme_post_link(); ?>" class="thumb-link">
+                <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail( array( $width, $height ) ); ?>
+                <?php else: ?>
+                    <?php if ( has_category( 4 ) ) { ?>
+                        <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/thongbao-img.png' ) ) ?>" class="wp-post-image" alt="">
+                    <?php } else { ?>
+                        <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/placeholder-img.png' ) ) ?>" class="placeholder-img" alt="">
+                    <?php } ?>
+                <?php endif; ?>
+            </a>
+        </div>
+        <?php
+    }
+}
 if ( !function_exists( 'theme_post_author' ) ) {
     function theme_post_author( $text = false )
     {
@@ -235,9 +291,9 @@ if ( !function_exists( 'theme_post_title' ) ) {
     {
         if ( get_the_title() ) {
             if ( $link == true ) {
-                echo '<h2 class="post-title"><a href="' . theme_post_link() . '">' . get_the_title() . '</a></h2>';
+                echo '<h3 class="post-title"><a href="' . theme_post_link() . '">' . get_the_title() . '</a></h3>';
             } else {
-                echo '<h2 class="post-title"><span>' . get_the_title() . '</span></h2>';
+                echo '<h3 class="post-title"><span>' . get_the_title() . '</span></h3>';
             }
         }
     }
@@ -464,7 +520,7 @@ if ( !function_exists( 'theme_check_content_media' ) ) {
                 $html = '';
                 break;
         }
-        echo $html;
+        echo esc_html( $html );
     }
 }
 
@@ -524,4 +580,66 @@ if ( !function_exists( 'ictu_next_and_previous_post_cat' ) ) {
     }
 
     add_action( 'theme-next-and-previous-post-cat-template', 'ictu_next_and_previous_post_cat', 10 );
+}
+
+if ( !function_exists( 'theme_post_share' ) ) {
+    function theme_post_share()
+    {
+        $share_image_url  = wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID() ), 'full' );
+        $share_link_url   = get_permalink( get_the_ID() );
+        $share_link_title = get_the_title();
+        $share_summary    = get_the_excerpt();
+
+        $facebook  = 'https://www.facebook.com/sharer.php?u=' . $share_link_url;
+        $x         = 'https://twitter.com/intent/tweet?url=' . $share_link_url . '&text=' . $share_summary;
+        $reddit    = 'https://www.reddit.com/submit?url=' . $share_link_url . '&title=' . $share_link_title;
+        $linkedin  = 'https://www.linkedin.com/sharing/share-offsite/?url=' . $share_link_url;
+        $pinterest = 'https://pinterest.com/pin/create/button/?url=' . $share_link_url . '&description=' . $share_summary . '&media=' . urlencode( $share_image_url );
+        $whatsapp  = 'https://api.whatsapp.com/send?text=' . $share_summary . '%20' . $share_link_url;
+        ?>
+        <div class="post-share">
+            <span class="title"><span><?php echo esc_html__( 'Chia sẻ bài viết', 'ictu' ); ?>: </span></span>
+            <div class="ovic-share-socials">
+                <div class="inner">
+                    <a class="button facebook"
+                       href="<?php echo esc_url( $facebook ); ?>"
+                       onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
+                        <span class="icon fa fa-facebook-f"></span>
+                        <span class="text">Facebook</span>
+                    </a>
+                    <a class="button pinterest"
+                       href="<?php echo esc_url( $pinterest ); ?>"
+                       onclick='window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
+                        <span class="icon fa fa-pinterest-p"></span>
+                        <span class="text">Pinterest</span>
+                    </a>
+                    <a class="button twitter"
+                       href="<?php echo esc_url( $x ); ?>"
+                       onclick='window.open(this.href,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
+                        <span class="icon fa fa-twitter"></span>
+                        <span class="text">X</span>
+                    </a>
+                    <a class="button reddit"
+                       href="<?php echo esc_url( $reddit ); ?>"
+                       onclick='window.open(this.href,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
+                        <span class="icon fa fa-reddit"></span>
+                        <span class="text">Reddit</span>
+                    </a>
+                    <a class="button linkedin"
+                       href="<?php echo esc_url( $linkedin ); ?>"
+                       onclick='window.open(this.href,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;'>
+                        <span class="icon fa fa-linkedin"></span>
+                        <span class="text">LinkedIn</span>
+                    </a>
+                    <a class="button whatsapp"
+                       href="<?php echo esc_url( $whatsapp ); ?>"
+                       target="_blank">
+                        <span class="icon fa fa-whatsapp"></span>
+                        <span class="text">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
 }

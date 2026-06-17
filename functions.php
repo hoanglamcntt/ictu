@@ -14,12 +14,6 @@ if ( !defined( 'THEME_VERSION' ) ) {
     define( 'THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 }
 
-//add_action( 'after_setup_theme', 'setup_woocommerce_support' );
-//
-//function setup_woocommerce_support() {
-//	add_theme_support( 'woocommerce' );
-//}
-
 if ( !function_exists( 'theme_init_setup' ) ) {
     function theme_init_setup()
     {
@@ -63,11 +57,11 @@ if ( !function_exists( 'theme_init_setup' ) ) {
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(
             array(
-                'primary'              => __( 'Primary Menu', 'ictu' ),
-                'footer-center'        => __( 'Footer Top Center', 'ictu' ),
-                'footer-center-bottom' => __( 'Footer Bottom Center', 'ictu' ),
-                'footer-right'         => __( 'Footer Top Right', 'ictu' ),
-                'footer-right-bottom'  => __( 'Footer Bottom Right', 'ictu' ),
+                'primary' => __( 'Primary Menu', 'ictu' ),
+                'footer1' => __( 'Footer Menu 1', 'ictu' ),
+                'footer2' => __( 'Footer Menu 2', 'ictu' ),
+                'footer3' => __( 'Footer Menu 3', 'ictu' ),
+                'footer4' => __( 'Footer Menu 4', 'ictu' ),
             )
         );
         // Add theme support for selective refresh for widgets.
@@ -93,7 +87,6 @@ if ( !function_exists( 'theme_init_setup' ) ) {
         add_theme_support( 'dark-editor-style' );
         // Add support for responsive embedded content.
         add_theme_support( 'responsive-embeds' );
-//        add_theme_support('woocommerce');
     }
 
     add_action( 'after_setup_theme', 'theme_init_setup' );
@@ -194,6 +187,11 @@ if ( !function_exists( 'theme_body_class' ) ) {
         }
         $classes[] = "ictu-v" . $my_theme->get( 'Version' );
 
+        if ( is_single() ) {
+            $post_options = get_post_meta( get_the_ID(), '_custom_metabox_post_options', true );
+            $classes[]    = !empty($post_options['type']) ? 'single-' . $post_options['type'] : '';
+        }
+
         return $classes;
     }
 
@@ -208,88 +206,6 @@ add_filter( 'admin_body_class', function ( $classes ) {
 
     return trim( $classes );
 } );
-/**
- * Ẩn chức năng với người dùng không phải Administrator
- */
-add_action( 'admin_menu', function () {
-    if ( !current_user_can( 'manage_options' ) ) {
-        remove_menu_page( 'upload.php' );
-        remove_menu_page( 'edit-comments.php' );
-        remove_menu_page( 'tools.php' );
-        remove_menu_page( 'edit.php?post_type=elementor_library' );
-        remove_menu_page( 'edit.php?post_type=rank_math_schema' );
-    }
-}, 999 );
-add_action( 'admin_init', function () {
-    global $pagenow;
-
-    // Kiểm tra nếu đang truy cập vào danh sách post type
-    $post_type = isset( $_GET['post_type'] ) ? $_GET['post_type'] : '';
-
-    $restricted_post_types = [
-        'elementor_library',
-        'rank_math_schema'
-    ];
-
-    if ( !current_user_can( 'manage_options' ) ) {
-        if ( ( $pagenow == 'upload.php' || $pagenow == 'edit-comments.php' || $pagenow == 'tools.php' ) ) {
-            wp_die( 'Xin lỗi, bạn không có được phép truy cập vào trang này.' );
-        }
-
-        if ( is_admin() && $pagenow == 'edit.php' && in_array( $post_type, $restricted_post_types ) ) {
-            wp_die( 'Xin lỗi, bạn không có được phép truy cập vào trang này.' );
-        }
-    }
-} );
-/**
- * Chỉ hiển thị bài viết của chính tác giả trong trang quản trị
- */
-add_action( 'pre_get_posts', function ( $query ) {
-    // Chỉ thực thi trong trang quản trị, cho truy vấn chính (main query)
-    // và đảm bảo không ảnh hưởng đến các yêu cầu AJAX
-    if ( is_admin() && $query->is_main_query() ) {
-
-        // Kiểm tra nếu user không phải là admin (hoặc người có quyền quản lý bài viết của người khác)
-        if ( !current_user_can( 'manage_options' ) ) {
-
-            // Lấy ID của user hiện tại
-            $current_user_id = get_current_user_id();
-
-            // Ép tham số 'author' vào query để chỉ lấy bài của user này
-            $query->set( 'author', $current_user_id );
-        }
-    }
-} );
-// Ẩn tất cả thông báo admin đối với không phải Admin
-add_action( 'admin_print_scripts', function () {
-    if ( !current_user_can( 'manage_options' ) ) {
-        echo '<style>.notice, .update-nag, .updated, .error { display: none !important; }</style>';
-    }
-} );
-// Lưu ý: Đây là code gợi ý để biến đổi giao diện admin
-add_action( 'admin_footer', 'custom_admin_category_search' );
-function custom_admin_category_search()
-{
-    $screen = get_current_screen();
-    if ( $screen->base == 'post' ) {
-        ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-                // Sử dụng các thư viện như Select2 để biến đổi input
-                // Hoặc đơn giản là thêm một input text để filter nhanh các checkbox
-                $('#category-all > ul').before('<input type="text" id="cat-search" placeholder="Tìm danh mục..." style="width:100%; margin:10px 0 0; border-radius:4px; border:1px solid #ddd;">');
-
-                $('#cat-search').on('keyup', function () {
-                    var value = $(this).val().toLowerCase();
-                    $('#category-all li').filter(function () {
-                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                    });
-                });
-            });
-        </script>
-        <?php
-    }
-}
 
 /**
  * Thay đổi Logo trang Login WordPress
@@ -299,12 +215,12 @@ function ictu_custom_login_logo()
 {
     $logo_url = get_stylesheet_directory_uri() . '/assets/images/logo-256.png';
     ?>
-    <style type="text/css">
+    <style>
         #login{
             width: 352px !important;
         }
         #login h1 a, .login h1 a{
-            background-image: url(<?php echo $logo_url; ?>);
+            background-image: url(<?php echo esc_url($logo_url); ?>);
             height: 128px;
             width: 320px;
             background-size: contain;
@@ -330,6 +246,92 @@ add_filter( 'login_headertext', 'ictu_login_logo_url_title' );
 function ictu_login_logo_url_title()
 {
     return get_bloginfo( 'name' );
+}
+
+/**
+ * Ẩn chức năng với người dùng không phải Administrator
+ */
+add_action( 'admin_menu', function () {
+    if ( !current_user_can( 'manage_options' ) ) {
+        remove_menu_page( 'upload.php' );
+        remove_menu_page( 'edit-comments.php' );
+        remove_menu_page( 'tools.php' );
+        remove_menu_page( 'edit.php?post_type=elementor_library' );
+        remove_menu_page( 'edit.php?post_type=rank_math_schema' );
+    }
+}, 999 );
+add_action( 'admin_init', function () {
+    global $pagenow;
+
+    // Kiểm tra nếu đang truy cập vào danh sách post type
+    $post_type = isset( $_GET['post_type'] ) ? esc_attr( $_GET['post_type'] ) : '';
+
+    $restricted_post_types = [
+        'elementor_library',
+        'rank_math_schema'
+    ];
+
+    if ( !current_user_can( 'manage_options' ) ) {
+        if ( ( $pagenow == 'upload.php' || $pagenow == 'edit-comments.php' || $pagenow == 'tools.php' ) ) {
+            wp_die( 'Xin lỗi, bạn không có được phép truy cập vào trang này.' );
+        }
+
+        if ( is_admin() && $pagenow == 'edit.php' && in_array( $post_type, $restricted_post_types ) ) {
+            wp_die( 'Xin lỗi, bạn không có được phép truy cập vào trang này.' );
+        }
+    }
+} );
+
+// Ẩn tất cả thông báo admin đối với không phải Admin
+add_action( 'admin_print_scripts', function () {
+    if ( !current_user_can( 'manage_options' ) ) {
+        echo '<style>.notice, .update-nag, .updated, .error { display: none !important; }</style>';
+    }
+} );
+
+/**
+ * Chỉ hiển thị bài viết của chính tác giả trong trang quản trị
+ */
+add_action( 'pre_get_posts', function ( $query ) {
+    // Chỉ thực thi trong trang quản trị, cho truy vấn chính (main query)
+    // và đảm bảo không ảnh hưởng đến các yêu cầu AJAX
+    if ( is_admin() && $query->is_main_query() ) {
+
+        // Kiểm tra nếu user không phải là admin (hoặc người có quyền quản lý bài viết của người khác)
+        if ( !current_user_can( 'manage_options' ) ) {
+
+            // Lấy ID của user hiện tại
+            $current_user_id = get_current_user_id();
+
+            // Ép tham số 'author' vào query để chỉ lấy bài của user này
+            $query->set( 'author', $current_user_id );
+        }
+    }
+} );
+
+// Lưu ý: Đây là code gợi ý để biến đổi giao diện admin
+add_action( 'admin_footer', 'custom_admin_category_search' );
+function custom_admin_category_search()
+{
+    $screen = get_current_screen();
+    if ( $screen->base == 'post' ) {
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                // Sử dụng các thư viện như Select2 để biến đổi input
+                // Hoặc đơn giản là thêm một input text để filter nhanh các checkbox
+                $('#category-all > ul').before('<input type="text" id="cat-search" placeholder="Tìm danh mục..." style="width:100%; margin:10px 0 0; border-radius:4px; border:1px solid #ddd;">');
+
+                $('#cat-search').on('keyup', function () {
+                    var value = $(this).val().toLowerCase();
+                    $('#category-all li').filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+        <?php
+    }
 }
 
 // Xóa chữ WordPress ở cuối tiêu đề trang đăng nhập
@@ -387,6 +389,10 @@ if ( !function_exists( 'wp_body_open' ) ) {
     }
 }
 /**
+ * Functions theme Colors convert.
+ */
+require_once get_theme_file_path( '/framework/classes/colors.php' );
+/**
  * Functions theme helper.
  */
 require get_parent_theme_file_path( '/framework/settings/helpers.php' );
@@ -433,21 +439,32 @@ require get_parent_theme_file_path( '/framework/blog-functions.php' );
 require get_parent_theme_file_path( '/framework/widget-init.php' );
 //require_once(get_parent_theme_file_path('/widgets/Avocado_Framework_Widget.php'));
 /**
- * Functions WooCommerce
+ * Others
  */
-if ( class_exists( 'WooCommerce' ) ) {
-    require get_parent_theme_file_path( '/framework/woo-functions.php' );
-}
 add_filter( 'big_image_size_threshold', '__return_false' );
 add_filter( 'wp_image_editors', function ( $editors ) {
     return [ 'WP_Image_Editor_GD', 'WP_Image_Editor_Imagick' ];
 } );
 /**
- * Functions Visual Composer.
+ * Homepage - Shortcodes
  */
-//if (class_exists('Vc_Manager')) {
-//    require get_parent_theme_file_path('/framework/visual-composer.php');
-//}
+require_once get_parent_theme_file_path( '/shortcodes/heading.php' );
+require_once get_parent_theme_file_path( '/shortcodes/slider.php' );
+require_once get_parent_theme_file_path( '/shortcodes/impression.php' );
+require_once get_parent_theme_file_path( '/shortcodes/banner.php' );
+require_once get_parent_theme_file_path( '/shortcodes/blog.php' );
+require_once get_parent_theme_file_path( '/shortcodes/vision.php' );
+require_once get_parent_theme_file_path( '/shortcodes/program.php' );
+require_once get_parent_theme_file_path( '/shortcodes/press.php' );
+require_once get_parent_theme_file_path( '/shortcodes/discover.php' );
+require_once get_parent_theme_file_path( '/shortcodes/comment.php' );
+require_once get_parent_theme_file_path( '/shortcodes/partner.php' );
+require_once get_parent_theme_file_path( '/shortcodes/student.php' );
+require_once get_parent_theme_file_path( '/shortcodes/document.php' );
+//add_action('after_setup_theme', function() {
+//    global $shortcode_tags;
+//    var_dump('after_setup_theme', isset($shortcode_tags['ictu-slider']));
+//});
 /**
  * Custom post type
  */

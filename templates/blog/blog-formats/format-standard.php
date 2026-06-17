@@ -8,7 +8,7 @@
  */
 ?>
 <?php
-$arg_type = !empty( $args['type'] ) ? $args['type'] : 'standard';
+$arg_type = !empty( $args['type'] ) ? sanitize_key( $args['type'] ) : 'standard';
 ?>
 <article <?php post_class( "article-in-loop post-item-type--{$arg_type}" ); ?>>
     <div class="post-inner">

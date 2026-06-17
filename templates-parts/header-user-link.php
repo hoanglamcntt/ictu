@@ -1,9 +1,6 @@
 <?php
 $account_link = wp_login_url();
 $currentUser  = wp_get_current_user();
-if (class_exists('WooCommerce')) {
-    $account_link = get_permalink(get_option('woocommerce_myaccount_page_id'));
-}
 
 if (is_user_logged_in()): ?>
     <div class="block-user-link">

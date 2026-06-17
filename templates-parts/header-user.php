@@ -10,9 +10,6 @@
 <?php
 $account_link = wp_login_url();
 $currentUser  = wp_get_current_user();
-if (class_exists('WooCommerce')) {
-    $account_link = get_permalink(get_option('woocommerce_myaccount_page_id'));
-}
 $account_link = apply_filters('ovic_shortcode_vc_link', $account_link);
 $title        = esc_html__('Đăng nhập', 'ictu');
 if (!empty($text)) {

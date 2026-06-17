@@ -97,12 +97,12 @@
             return url.match(regex) ? RegExp.$2 : url;
         }
         const createSlide = function (gallery, placeholder, gallery_id) {
-            let html = '<div class="ovic-review-twenty-years__carousel">';
+            let html = '<div class="ovic-impression__carousel">';
             gallery.forEach((slide, index) => {
                 const caption = slide.caption ? '<figcaption>' + slide.caption + '</figcaption>' : '';
                 if (slide.type === 'image') {
-                    // html += '<div class="ovic-review-twenty-years__carousel-cell"><figure><img src="' + slide.url + '" alt="" width="671" height="475">' + caption + '</figure></div>';
-                    html += '<a class="ovic-review-twenty-years__carousel-cell" href="#" data-item="' + index + '" data-gallery-id="' + gallery_id + '"><figure><img src="' + placeholder + '"  data-flickity-lazyload="' + slide.url + '" alt="" width="631" height="432">' + caption + '</figure></a>';
+                    // html += '<div class="ovic-impression__carousel-cell"><figure><img src="' + slide.url + '" alt="" width="671" height="475">' + caption + '</figure></div>';
+                    html += '<a class="ovic-impression__carousel-cell" href="#" data-item="' + index + '" data-gallery-id="' + gallery_id + '"><figure><img src="' + placeholder + '"  data-flickity-lazyload="' + slide.url + '" alt="" width="631" height="432">' + caption + '</figure></a>';
                 } else {
                     let video_id = slide['url'];
                     const _plyr_options = {
@@ -110,7 +110,7 @@
                         ratio: '626:400'
                     }
                     if (slide.provider === 'external') {
-                        html += '<div class="ovic-review-twenty-years__carousel-cell" data-item="' + index + '" data-gallery-id="' + gallery_id + '"><video class="js_plyr_video" data-plyr-config=\'' + JSON.stringify(_plyr_options) + '\' data-plyr-provider="' + slide.provider + '" src="' + slide['url'] + '" data-poster="' + slide.poster + '" ></video></div>';
+                        html += '<div class="ovic-impression__carousel-cell" data-item="' + index + '" data-gallery-id="' + gallery_id + '"><video class="js_plyr_video" data-plyr-config=\'' + JSON.stringify(_plyr_options) + '\' data-plyr-provider="' + slide.provider + '" src="' + slide['url'] + '" data-poster="' + slide.poster + '" ></video></div>';
                     } else {
                         video_id = slide.provider === 'youtube' ? parseYoutubeIdFromUrl(slide['url']) : parseVimeoIdFromUrl(slide['url']);
                         if (slide.provider === 'youtube') {
@@ -131,7 +131,7 @@
                             };
                         }
                         if (video_id) {
-                            html += '<div class="ovic-review-twenty-years__carousel-cell" data-item="' + index + '" data-gallery-id="' + gallery_id + '"><div class="js_plyr_video" data-plyr-config=\'' + JSON.stringify(_plyr_options) + '\' data-plyr-provider="' + slide.provider + '" data-plyr-embed-id="' + video_id + '" data-poster="' + slide.poster + '" ></div></div>';
+                            html += '<div class="ovic-impression__carousel-cell" data-item="' + index + '" data-gallery-id="' + gallery_id + '"><div class="js_plyr_video" data-plyr-config=\'' + JSON.stringify(_plyr_options) + '\' data-plyr-provider="' + slide.provider + '" data-plyr-embed-id="' + video_id + '" data-poster="' + slide.poster + '" ></div></div>';
                         }
                     }
                 }
@@ -150,15 +150,15 @@
             }
             if (Array.isArray(activatedGallery) && activatedGallery.length) {
                 $(this).html('').append(createSlide(activatedGallery, store['placeholder'], store['active']));
-                $('.ovic-review-twenty-years__carousel').flickity(configs)
+                $('.ovic-impression__carousel').flickity(configs)
             }
         });
         if ($(this).length) {
-            $document.on('click', '.ovic-review-twenty-years__btn-nav:not(.--element-activated)', function (event) {
+            $document.on('click', '.ovic-impression__btn-nav:not(.--element-activated)', function (event) {
                 event.preventDefault();
-                const $parent = $(this).closest('.ovic-review-twenty-years');
+                const $parent = $(this).closest('.ovic-impression');
                 const element = $(this).data('element');
-                const $slide_control = $parent.find('.ovic-review-twenty-years__media-control');
+                const $slide_control = $parent.find('.ovic-impression__media-control');
                 if ($parent.length && element) {
                     $parent.find('.--element-activated').removeClass('--element-activated');
                     $parent.find(`[data-element=${element}]`).addClass('--element-activated');
@@ -175,15 +175,15 @@
                     const activatedGallery = store['galleries'][element];
                     if (Array.isArray(activatedGallery) && activatedGallery.length) {
                         $slide_control.html('').append(createSlide(activatedGallery, store['placeholder'], element));
-                        $('.ovic-review-twenty-years__carousel').flickity(configs)
+                        $('.ovic-impression__carousel').flickity(configs)
                     }
                 }
             });
         }
-        $document.on('click', 'a.ovic-review-twenty-years__carousel-cell.is-selected', function (e) {
+        $document.on('click', 'a.ovic-impression__carousel-cell.is-selected', function (e) {
             e.preventDefault();
             let $this = $(this),
-                $parent = $this.closest('.ovic-review-twenty-years__media-control'),
+                $parent = $this.closest('.ovic-impression__media-control'),
                 gallery_id = $this.data('gallery-id'),
                 data = $parent.length ? $parent.data('store') : null,
                 startIndex = $this.hasClass('is-selected') ? $this.data('item') : $this.siblings('.is-selected').data('item'),
@@ -263,7 +263,7 @@
     /**************************************
      * ovic review twenty years
      * ***********************************/
-    $('.ovic-review-twenty-years__media-control').review_twenty_years();
+    $('.ovic-impression__media-control').review_twenty_years();
 
     /**************************************
      * sidebar control on mobile
@@ -297,6 +297,20 @@
     $(document).on('click', '.backtotop, .action-to-top', function (e) {
         $('html, body').animate({scrollTop: 0}, 800);
         e.preventDefault();
+    });
+
+    // handle ovic-tab
+    $(document).on('click', '.ovic-tab .tab-nav:not(.active) a', function () {
+        var $nav = $(this).closest('.nav-item'),
+            tabID = $nav.attr('data-id'),
+            $tab = $nav.closest('.ovic-tab'),
+            $content = $tab.find(`.tab-panel[data-id=${tabID}]`);
+        $nav.siblings().removeClass('active');
+        $nav.addClass('active');
+        $tab.find('.tab-panel').removeClass('active');
+        $content.addClass('active');
+
+        return false;
     });
 
     $document.on('click', '.sidebar-head-section__button', function (event) {
@@ -352,7 +366,7 @@
             // $scope.find( '.equal-container.better-height' ).biolife_better_equal_elems();
         });
     });
-    
+
     window.addEventListener("load", function load() {
         /**
          * remove listener, no longer needed
@@ -378,6 +392,273 @@
                 });
             }, delay);
         }
+
+        /**
+         * swiper slider
+         * */
+        new Swiper(".swiper_fade", {
+            grabCursor: true,
+            effect: "fade",
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_creative", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: [0, 0, -400],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_creative2", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-120%", 0, -500],
+                },
+                next: {
+                    shadow: true,
+                    translate: ["120%", 0, -500],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_creative3", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-20%", 0, -1],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_creative4", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: [0, 0, -800],
+                    rotate: [180, 0, 0],
+                },
+                next: {
+                    shadow: true,
+                    translate: [0, 0, -800],
+                    rotate: [-180, 0, 0],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_creative5", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-125%", 0, -800],
+                    rotate: [0, 0, -90],
+                },
+                next: {
+                    shadow: true,
+                    translate: ["125%", 0, -800],
+                    rotate: [0, 0, 90],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_creative6", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    origin: "left center",
+                    translate: ["-5%", 0, -200],
+                    rotate: [0, 100, 0],
+                },
+                next: {
+                    origin: "right center",
+                    translate: ["5%", 0, -200],
+                    rotate: [0, -100, 0],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        new Swiper(".swiper_cube", {
+            grabCursor: true,
+            effect: "cube",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        new Swiper(".swiper_flip", {
+            grabCursor: true,
+            effect: "flip",
+            loop: true,
+            speed: 1500,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // homepage - special img
+        new Swiper(".special-img", {
+            grabCursor: true,
+            effect: "creative",
+            loop: true,
+            speed: 600,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-20%", 0, -1],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
     });
 })
 (window.jQuery);

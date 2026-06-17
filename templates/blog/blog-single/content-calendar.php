@@ -14,12 +14,13 @@ if ((isset($args['google_doc']) && $args['google_doc'])) {
     $classes[]       = 'single-blog-content--has-iframe';
 } ?>
 <div class="<?php echo implode(' ', $classes) ?>">
-    <div class="single-post-head-block" style="margin-bottom: 0">
-        <?php the_title('<h2 class="single-post-head-block__title">', '</h1>'); ?>
-    </div>
     <?php while (have_posts()): the_post(); ?>
         <article <?php post_class('post-item style-01 article-style-calendar'); ?>>
             <div class="single-post-content">
+<!--                <div class="single-post__head">-->
+<!--                    --><?php //the_title( '<h1 class="single-post__title">', '</h1>' ); ?>
+<!--                    <span class="post-date"><span class="icon fa fa-calendar"></span>--><?php //echo get_the_date( 'd/m/Y' ); ?><!--</span>-->
+<!--                </div>-->
                 <?php if ('' !== get_post()->post_content): ?>
                     <div class="single-post__body">
                         <?php the_content(); ?>

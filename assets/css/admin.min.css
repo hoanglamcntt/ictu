@@ -1,4 +1,29 @@
-.ovic-field-text input{
+::placeholder{
+    color: #ccc;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+::-webkit-input-placeholder{
+    color: #ccc;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+:-moz-placeholder{
+    color: #ccc;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+::-moz-placeholder{
+    color: #ccc;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+:-ms-input-placeholder{
+    color: #ccc;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+body .ovic-field-text input{
     width: 100%;
 }
 body table.wp-list-table td.column-thumb img{
@@ -23,10 +48,6 @@ body table.wp-list-table td.column-thumb img{
     filter: none !important;
     font-family: inherit !important;
 }
-.ovic-field-text input[type=text]:placeholder-shown:not(:focus){
-    opacity: .5;
-    border-color: red;
-}
 .button-carparts:not(:hover)::before{
     transform: skew(-30deg);
 }
@@ -40,6 +61,7 @@ body table.wp-list-table td.column-thumb img{
     z-index: -1;
     transition: .2s;
 }
+.not-administrator #adminmenu #toplevel_page_elementor-home,
 .not-administrator #adminmenu #toplevel_page_rank-math{
     display: none;
 }
@@ -53,4 +75,38 @@ body table.wp-list-table td.column-thumb img{
 .not-administrator #adv-settings label[for="dashboard_primary-hide"],
 .not-administrator #adv-settings label[for="e-dashboard-overview-hide"]{
     display: none;
+}
+body .ovic-text-subtitle{
+    margin-top: 5px;
+}
+body .ovic-field-number .ovic--wrap{
+    float: none;
+    width: auto;
+}
+body .ovic-field .ovic-title h4{
+    display: inline;
+}
+body .ovic-field .ovic-title .ovic-text-subtitle{
+    display: inline;
+    margin-inline-start: .5em;
+}
+body .ovic-field .ovic-title .ovic-text-subtitle:before{
+    content: '(';
+}
+body .ovic-field .ovic-title .ovic-text-subtitle:after{
+    content: ')';
+}
+body .ovic-modal-icon i{
+    font-size: 22px;
+}
+body .ovic-modal-v2.ovic-modal-icon .ovic-modal-load i{
+    width: 40px;
+    height: 40px;
+}
+body .ovic-modal-v2.ovic-modal-icon .ovic-modal-load .main-icon-btn-grid-8,
+body .ovic-modal-v2.ovic-modal-icon .ovic-modal-load .main-icon-btn-grid-7,
+body .ovic-modal-v2.ovic-modal-icon .ovic-modal-load .main-icon-btn-grid-6,
+body .ovic-modal-v2.ovic-modal-icon .ovic-modal-load .main-icon-btn-grid-5,
+body .ovic-modal-v2.ovic-modal-icon .ovic-modal-load .main-icon-btn-grid-4{
+    width: 90px;
 }

@@ -20,7 +20,7 @@ $main_class   = [ "container", "site-content", "use-page-head--1" ];
 $path         = 'blog/blog-content/content';
 $has_sidebar  = $page_layout['layout'] != 'full';
 $main_class[] = $has_sidebar ? "sidebar-{$page_layout['layout']}" : 'no-sidebar';
-$format       = 'standard';
+$format       = 'grid';
 $post_options = array();
 if ( is_single() ) {
     $main_class[] = 'single-post-page';
@@ -38,14 +38,20 @@ if ( is_single() ) {
             $format = $custom_template;
         }
     }
-//    echo '<pre>';
-//    print_r($_GET);
-//    echo '</pre>';
 }
 ?>
 <?php theme_page_banner_template(); ?>
+    <div class="breadcrumb-container" style="background-image: url(<?= esc_url( get_theme_file_uri( '/assets/images/bg.jpg' ) ) ?>);">
+        <div class="container"><?php theme_breadcrumb(); ?></div>
+    </div>
     <!-- .site-content-contain -->
     <div id="content" class="<?php echo implode( ' ', $main_class ); ?>">
+<!--        --><?php //if ( is_single() ) { ?>
+<!--            <div class="single-post__head">-->
+<!--                --><?php //the_title( '<h1 class="single-post__title">', '</h1>' ); ?>
+<!--                <span class="post-date"><span class="icon fa fa-calendar"></span>--><?php //echo get_the_date( 'd/m/Y' ); ?><!--</span>-->
+<!--            </div>-->
+<!--        --><?php //} ?>
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
                 <?php

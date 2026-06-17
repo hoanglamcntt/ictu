@@ -13,7 +13,7 @@
  */
 ?>
 <?php if (get_theme_option('enable_back_to_top') == 1): ?>
-    <a href="#" class="backtotop"><i class="icon-top fa fa-angle-up"></i></a>
+    <a href="#" class="backtotop"><i class="icon-top main-icon-chevrons-up"></i></a>
 <?php endif; ?>
 <?php do_action('ovic_footer_content_after'); ?>
 <?php //do_action( 'ovic_footer_content' ); ?>
@@ -24,23 +24,29 @@
     <?php theme_header_search_template(); ?>
 </div>
 <div class="section-footer-mobile-bar">
-    <div class="section-footer-mobile-bar__container">
-        <a href="<?php echo esc_url(home_url('/')) ?>" class="footer-mobile-bar__button">
+    <div class="inner">
+        <a href="<?php echo esc_url(home_url('/')) ?>">
             <i class="fa fa-home" aria-hidden="true"></i>
             <span><?php esc_html_e('Home', 'ictu') ?></span>
         </a>
-        <a href="#" class="footer-mobile-bar__button js_open_mobile_search">
+        <a href="#" class="js_open_mobile_search">
             <i class="fa fa-search" aria-hidden="true"></i>
             <span><?php esc_html_e('Search', 'ictu') ?></span>
         </a>
-        <a href="#" class="footer-mobile-bar__button js_footer_mobile_button_toggle_sidebar">
-            <i class="fa fa-sliders" aria-hidden="true"></i>
-            <span><?php esc_html_e('Sidebar', 'ictu') ?></span>
-        </a>
-        <a href="#" class="footer-mobile-bar__button menu-toggle">
+<!--        <a href="#" class="js_footer_mobile_button_toggle_sidebar">-->
+<!--            <i class="fa fa-sliders" aria-hidden="true"></i>-->
+<!--            <span>--><?php //esc_html_e('Sidebar', 'ictu') ?><!--</span>-->
+<!--        </a>-->
+        <a href="#" class="menu-toggle">
             <i class="fa fa-bars" aria-hidden="true"></i>
             <span><?php esc_html_e('Menu', 'ictu') ?></span>
         </a>
+        <?php if (get_theme_option('enable_back_to_top') == 1): ?>
+            <a href="#" class="backtotop">
+                <i class="icon-top main-icon-chevrons-up"></i>
+                <span><?php esc_html_e('Top', 'ictu') ?></span>
+            </a>
+        <?php endif; ?>
     </div>
 </div>
 <div class="ictu-social-button">
@@ -53,25 +59,4 @@
 </div>
 <?php wp_footer(); ?>
 </body>
-<!-- Load Facebook SDK for JavaScript -->
-<!--<div id="fb-root"></div>-->
-<!--<script>( function ( d, s, id ) {-->
-<!--        var js, fjs = d.getElementsByTagName( s )[ 0 ];-->
-<!--        if ( d.getElementById( id ) ) return;-->
-<!--        js     = d.createElement( s );-->
-<!--        js.id  = id;-->
-<!--        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";-->
-<!--        fjs.parentNode.insertBefore( js, fjs );-->
-<!--    }( document, 'script', 'facebook-jssdk' ) );-->
-<!--</script>-->
-<!---->
-<!-- Load Facebook SDK for JavaScript -->
-<!--<div id="fb-root"></div>-->
-<!--<script async defer crossorigin="anonymous"-->
-<!--        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1-->
-<!--             &version={graph-api-version}-->
-<!--             &appId={your-facebook-app-id}-->
-<!--             &autoLogAppEvents=1"-->
-<!--        nonce="FOKrbAYI">-->
-<!--</script>-->
 </html>

@@ -2,7 +2,6 @@
 get_header();
 $page_layout      = theme_page_layout();
 $has_sidebar      = $page_layout['layout'] != 'full';
-$hide_breadcrumbs = theme_option_meta('_custom_page_side_options', null, 'page_breadcrumbs');
 /* CLASS */
 $main_class   = array("container", "site-content");
 $main_class[] = $has_sidebar ? "sidebar-{$page_layout['layout']}" : 'no-sidebar';
@@ -12,13 +11,13 @@ if (!empty($meta_class)) {
 ?>
     <!-- page banner -->
 <?php theme_page_banner_template(); ?>
+    <div class="breadcrumb-container" style="background-image: url(<?= esc_url( get_theme_file_uri( '/assets/images/bg.jpg' ) ) ?>);">
+        <div class="container"><?php theme_breadcrumb(); ?></div>
+    </div>
     <!-- .site-content-contain -->
     <div id="content" class="<?php echo implode(' ', $main_class); ?>">
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
-                <?php if ($hide_breadcrumbs != 1) : ?>
-                    <?php theme_breadcrumb(); ?>
-                <?php endif; ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <div class="entry-content">

@@ -240,14 +240,6 @@ if ( !function_exists( 'settings_theme_options' ) && class_exists( 'OVIC_Options
             'icon'   => 'fa fa-folder-open-o',
             'title'  => 'Header',
             'fields' => array(
-                'header_template' => array(
-                    'id'         => 'header_template',
-                    'type'       => 'select_preview',
-                    'title'      => __( 'Desktop', 'ictu' ),
-                    'options'    => theme_file_options( '/templates/headers/', 'header' ),
-                    'default'    => 'style-01',
-                    'attributes' => array( 'data-depend-id' => 'header_template' ),
-                ),
                 'sticky_menu'     => array(
                     'id'    => 'sticky_menu',
                     'type'  => 'switcher',
@@ -300,83 +292,665 @@ if ( !function_exists( 'settings_theme_options' ) && class_exists( 'OVIC_Options
                 )
             )
         );
+        $options['home_page']    = array(
+            'name'     => 'header_main',
+            'icon'     => 'fa fa-building-o',
+            'title'    => 'Homepage',
+            'sections' => array(
+                array(
+                    'title'  => esc_html__( 'Slideshow', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'     => 'slideshow',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'desktop',
+                                    'type'  => 'image',
+                                    'title' => __( 'Desktop', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'mobile',
+                                    'type'  => 'image',
+                                    'title' => __( 'Mobile', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'link',
+                                    'type'  => 'text',
+                                    'title' => __( 'Link', 'ictu' ),
+                                ),
+                            )
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Thông tin chung', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'   => 'news_tab',
+                            'type' => 'tabbed',
+                            'tabs' => array(
+                                array(
+                                    'title'  => 'Tab 1',
+                                    'fields' => array(
+                                        array(
+                                            'id'      => 'tab1_title',
+                                            'type'    => 'text',
+                                            'title'   => __( 'Title', 'ictu' ),
+                                            'default' => 'Tin tức - Sự kiện',
+                                        ),
+                                        array(
+                                            'id'    => 'tab1_special_post',
+                                            'type'  => 'number',
+                                            'title' => __( 'Special post id', 'ictu' ),
+                                            'desc'  => __( 'Example: 1', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'      => 'tab1_posts_category',
+                                            'type'    => 'select',
+                                            'options' => 'category',
+                                            'chosen'  => true,
+                                            'ajax'    => true,
+                                            'title'   => __( 'Posts category', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'tab1_posts_ids',
+                                            'type'  => 'text',
+                                            'title' => __( 'Posts id', 'ictu' ),
+                                            'desc'  => __( 'Example: 1, 2, 3', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'tab1_posts_more',
+                                            'type'  => 'text',
+                                            'title' => __( 'View more link', 'ictu' ),
+                                            'desc'  => __( 'Default is category link', 'ictu' ),
+                                        ),
+                                    ),
+                                ),
+                                array(
+                                    'title'  => 'Tab 2',
+                                    'fields' => array(
+                                        array(
+                                            'id'      => 'tab2_title',
+                                            'type'    => 'text',
+                                            'title'   => __( 'Title', 'ictu' ),
+                                            'default' => 'Thông báo',
+                                        ),
+                                        array(
+                                            'id'    => 'tab2_special_post',
+                                            'type'  => 'number',
+                                            'title' => __( 'Special post id', 'ictu' ),
+                                            'desc'  => __( 'Example: 1', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'      => 'tab2_posts_category',
+                                            'type'    => 'select',
+                                            'options' => 'category',
+                                            'chosen'  => true,
+                                            'ajax'    => true,
+                                            'title'   => __( 'Posts category', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'tab2_posts_ids',
+                                            'type'  => 'text',
+                                            'title' => __( 'Posts id', 'ictu' ),
+                                            'desc'  => __( 'Example: 1, 2, 3', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'tab2_posts_more',
+                                            'type'  => 'text',
+                                            'title' => __( 'View more link', 'ictu' ),
+                                            'desc'  => __( 'Default is category link', 'ictu' ),
+                                        ),
+                                    ),
+                                ),
+                                array(
+                                    'title'  => 'Tab 3',
+                                    'fields' => array(
+                                        array(
+                                            'id'      => 'tab3_title',
+                                            'type'    => 'text',
+                                            'title'   => __( 'Title', 'ictu' ),
+                                            'default' => 'Tuyển sinh',
+                                        ),
+                                        array(
+                                            'id'    => 'tab3_special_img',
+                                            'type'  => 'gallery',
+                                            'title' => __( 'Special image', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'     => 'tab3_special_link',
+                                            'type'   => 'group',
+                                            'title'  => __( 'Special link', 'ictu' ),
+                                            'fields' => array(
+                                                array(
+                                                    'id'    => 'title',
+                                                    'type'  => 'text',
+                                                    'title' => __( 'Title', 'ictu' ),
+                                                ),
+                                                array(
+                                                    'id'    => 'link',
+                                                    'type'  => 'text',
+                                                    'title' => __( 'Link', 'ictu' ),
+                                                ),
+                                            )
+                                        ),
+                                        array(
+                                            'id'     => 'tab3_special_phone',
+                                            'type'   => 'group',
+                                            'title'  => __( 'Special phone', 'ictu' ),
+                                            'fields' => array(
+                                                array(
+                                                    'id'    => 'phone',
+                                                    'type'  => 'text',
+                                                    'title' => __( 'Phone', 'ictu' ),
+                                                ),
+                                            )
+                                        ),
+                                        array(
+                                            'id'    => 'tab3_special_facebook',
+                                            'type'  => 'text',
+                                            'title' => __( 'Special Facebook', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'      => 'tab3_posts_category',
+                                            'type'    => 'select',
+                                            'options' => 'category',
+                                            'chosen'  => true,
+                                            'ajax'    => true,
+                                            'title'   => __( 'Posts category', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'tab3_posts_ids',
+                                            'type'  => 'text',
+                                            'title' => __( 'Posts id', 'ictu' ),
+                                            'desc'  => __( 'Example: 1, 2, 3', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'tab3_posts_more',
+                                            'type'  => 'text',
+                                            'title' => __( 'View more link', 'ictu' ),
+                                        ),
+                                    ),
+                                ),
+
+                            ),
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Truy cập nhanh', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'     => 'access',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'title',
+                                    'type'  => 'text',
+                                    'title' => __( 'Title', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'image',
+                                    'type'  => 'image',
+                                    'title' => __( 'Image', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'link',
+                                    'type'  => 'text',
+                                    'title' => __( 'Link', 'ictu' ),
+                                ),
+                            )
+                        ),
+                    )
+                ),
+//                array(
+//                    'title'  => esc_html__( 'Tầm nhìn - Sứ mệnh', 'ictu' ),
+//                    'fields' => array(
+//                        array(
+//                            'id'      => 'vision_title',
+//                            'type'    => 'text',
+//                            'title'   => __( 'Title', 'ictu' ),
+//                            'default' => 'Tầm nhìn - Sứ mệnh',
+//                        ),
+//                        array(
+//                            'id'    => 'vision_bg',
+//                            'type'  => 'image',
+//                            'title' => __( 'Background', 'ictu' ),
+//                        ),
+//                        array(
+//                            'id'     => 'vision',
+//                            'type'   => 'group',
+//                            'title'  => __( 'Item', 'ictu' ),
+//                            'fields' => array(
+//                                array(
+//                                    'id'    => 'title',
+//                                    'type'  => 'text',
+//                                    'title' => __( 'Title', 'ictu' ),
+//                                ),
+//                                array(
+//                                    'id'    => 'image',
+//                                    'type'  => 'image',
+//                                    'title' => __( 'Image', 'ictu' ),
+//                                ),
+//                                array(
+//                                    'id'     => 'text',
+//                                    'type'   => 'group',
+//                                    'title'  => __( 'Text', 'ictu' ),
+//                                    'fields' => array(
+//                                        array(
+//                                            'id'    => 'text',
+//                                            'type'  => 'textarea',
+//                                            'title' => __( 'Text', 'ictu' ),
+//                                        ),
+//                                    )
+//                                ),
+//                            )
+//                        ),
+//                    )
+//                ),
+                array(
+                    'title'  => esc_html__( 'Nhóm ngành đào tạo', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'program_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Nhóm ngành đào tạo',
+                        ),
+                        array(
+                            'id'     => 'program',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'title',
+                                    'type'  => 'text',
+                                    'title' => __( 'Title', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'subtitle',
+                                    'type'  => 'text',
+                                    'title' => __( 'Subtitle', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'image',
+                                    'type'  => 'image',
+                                    'title' => __( 'Image', 'ictu' ),
+                                ),
+                                array(
+                                    'id'     => 'text',
+                                    'type'   => 'group',
+                                    'title'  => __( 'Program', 'ictu' ),
+                                    'fields' => array(
+                                        array(
+                                            'id'    => 'text',
+                                            'type'  => 'text',
+                                            'title' => __( 'Name', 'ictu' ),
+                                        ),
+                                        array(
+                                            'id'    => 'link',
+                                            'type'  => 'text',
+                                            'title' => __( 'Link', 'ictu' ),
+                                        ),
+                                    )
+                                ),
+                            )
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Bài viết', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'activities_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Hợp tác đối ngoại',
+                        ),
+                        array(
+                            'id'    => 'activities_special_post',
+                            'type'  => 'number',
+                            'title' => __( 'Special post id', 'ictu' ),
+                            'desc'  => __( 'Example: 1', 'ictu' ),
+                        ),
+                        array(
+                            'id'      => 'activities_posts_category',
+                            'type'    => 'select',
+                            'options' => 'category',
+                            'chosen'  => true,
+                            'ajax'    => true,
+                            'title'   => __( 'Posts category', 'ictu' ),
+                        ),
+                        array(
+                            'id'    => 'activities_posts_ids',
+                            'type'  => 'text',
+                            'title' => __( 'Posts id', 'ictu' ),
+                            'desc'  => __( 'Example: 1, 2, 3', 'ictu' ),
+                        ),
+                        array(
+                            'id'      => 'activities_button_link',
+                            'type'    => 'text',
+                            'title'   => __( 'Button link', 'ictu' ),
+                            'default' => 'https://ictu.edu.vn/category/hop-tac-quoc-te/',
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Báo chí nói về ICTU', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'press_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Báo chí nói về ICTU',
+                        ),
+                        array(
+                            'id'      => 'press_button_link',
+                            'type'    => 'text',
+                            'title'   => __( 'Button link', 'ictu' ),
+                            'default' => 'https://ictu.edu.vn/bao-chi-noi-gi-ve-ictu/',
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Chặng đường phát triển', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'impression_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Chặng đường phát triển',
+                        ),
+                        array(
+                            'id'     => 'impression',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'number',
+                                    'type'  => 'text',
+                                    'title' => __( 'Year', 'ictu' ),
+                                ),
+//                                array(
+//                                    'id'      => 'video_provider',
+//                                    'type'    => 'select',
+//                                    'title'   => __( 'Provider', 'ictu' ),
+//                                    'options' => array(
+//                                        'youtube'  => __( 'Youtube', 'ictu' ),
+//                                        'vimeo'    => __( 'Vimeo', 'ictu' ),
+//                                        'external' => __( 'External', 'ictu' ),
+//                                    ),
+//                                ),
+//                                array(
+//                                    'id'    => 'video_thumb',
+//                                    'type'  => 'image',
+//                                    'title' => __( 'Video Poster', 'ictu' ),
+//                                ),
+//                                array(
+//                                    'id'    => 'video_src',
+//                                    'type'  => 'text',
+//                                    'title' => __( 'Video Src', 'ictu' ),
+//                                ),
+//                                array(
+//                                    'id'    => 'video_caption',
+//                                    'type'  => 'text',
+//                                    'title' => __( 'Video Caption', 'ictu' ),
+//                                ),
+                                array(
+                                    'id'    => 'gallery',
+                                    'type'  => 'gallery',
+                                    'title' => __( 'Gallery', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'desc',
+                                    'type'  => 'textarea',
+                                    'title' => __( 'Description', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'teacher',
+                                    'type'  => 'text',
+                                    'title' => __( 'Tỉ lệ giảng viên trình độ cao', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'training_programs',
+                                    'type'  => 'text',
+                                    'title' => __( 'Số ngành đào tạo', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'total_students',
+                                    'type'  => 'text',
+                                    'title' => __( 'Quy mô đào tạo ĐHCQ', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'total_labs',
+                                    'type'  => 'text',
+                                    'title' => __( 'Diện tích sà xây dựng', 'ictu' ),
+                                ),
+//                                array(
+//                                    'id'    => 'link',
+//                                    'type'  => 'text',
+//                                    'title' => __( 'Article link', 'ictu' ),
+//                                ),
+                            )
+                        ),
+                        array(
+                            'id'     => 'banner',
+                            'type'   => 'group',
+                            'title'  => __( 'Banner', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'image',
+                                    'type'  => 'image',
+                                    'title' => __( 'Banner', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'link',
+                                    'type'  => 'text',
+                                    'title' => __( 'Link', 'ictu' ),
+                                ),
+                            )
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Sinh viên', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'student_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Sinh viên',
+                        ),
+                        array(
+                            'id'    => 'student_gallery',
+                            'type'  => 'gallery',
+                            'title' => __( 'Gallery', 'ictu' ),
+                        ),
+                        array(
+                            'id'     => 'student',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'title',
+                                    'type'  => 'text',
+                                    'title' => __( 'Title', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'icon',
+                                    'type'  => 'icon',
+                                    'title' => __( 'Icon', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'image',
+                                    'type'  => 'image',
+                                    'title' => __( 'Image', 'ictu' ),
+                                    'desc'  => __( 'The image will replace the icon', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'link',
+                                    'type'  => 'text',
+                                    'title' => __( 'Link', 'ictu' ),
+                                ),
+                            )
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Đánh giá, cảm nhận', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'comment_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Đánh giá, cảm nhận',
+                        ),
+                        array(
+                            'id'     => 'comment',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'name',
+                                    'type'  => 'text',
+                                    'title' => __( 'Name', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'job',
+                                    'type'  => 'text',
+                                    'title' => __( 'Job Title', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'desc',
+                                    'type'  => 'textarea',
+                                    'title' => __( 'Description', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'avatar',
+                                    'type'  => 'image',
+                                    'title' => __( 'Avatar', 'ictu' ),
+                                ),
+                            )
+                        ),
+                    )
+                ),
+                array(
+                    'title'  => esc_html__( 'Đối tác', 'ictu' ),
+                    'fields' => array(
+                        array(
+                            'id'      => 'partner_title',
+                            'type'    => 'text',
+                            'title'   => __( 'Title', 'ictu' ),
+                            'default' => 'Đối tác của ICTU',
+                        ),
+                        array(
+                            'id'    => 'partner_image',
+                            'type'  => 'image',
+                            'title' => __( 'Image', 'ictu' ),
+                        ),
+                        array(
+                            'id'     => 'partner',
+                            'type'   => 'group',
+                            'title'  => __( 'Item', 'ictu' ),
+                            'fields' => array(
+                                array(
+                                    'id'    => 'name',
+                                    'type'  => 'text',
+                                    'title' => __( 'Name', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'logo',
+                                    'type'  => 'image',
+                                    'title' => __( 'Logo', 'ictu' ),
+                                ),
+                                array(
+                                    'id'    => 'link',
+                                    'type'  => 'text',
+                                    'title' => __( 'Link', 'ictu' ),
+                                ),
+                            )
+                        ),
+                    )
+                ),
+            ),
+        );
         $options['footer_main']  = array(
             'name'   => 'footer_main',
             'icon'   => 'fa fa-folder-open-o',
             'title'  => esc_html__( 'Footer', 'ictu' ),
             'fields' => array(
-                'footer_template'        => array(
-                    'id'         => 'footer_template',
-                    'type'       => 'select_preview',
-                    'title'      => __( 'Footer template', 'ictu' ),
-                    'options'    => theme_file_options( '/templates/footer/', 'footer' ),
-                    'default'    => 'style-01',
-                    'attributes' => array( 'data-depend-id' => 'footer_template' ),
+                array(
+                    'id'    => 'footer_bg',
+                    'type'  => 'image',
+                    'title' => __( 'Background', 'ictu' ),
                 ),
-                'university_name'        => array(
+                array(
                     'id'      => 'university_name',
                     'type'    => 'text',
-                    'title'   => __( 'University Name', 'ictu' ),
-                    'default' => 'trường đại học công nghệ thông tin và truyền thông'
+                    'title'   => __( 'Name', 'ictu' ),
+                    'default' => 'Trường Đại học Công Nghệ Thông Tin và Truyền Thông'
                 ),
-                'university_address'     => array(
+                'university_address' => array(
                     'id'      => 'university_address',
                     'type'    => 'text',
                     'title'   => __( 'Address', 'ictu' ),
                     'default' => 'Địa chỉ : Đường Z115, Quyết Thắng, Thành Phố Thái Nguyên.'
                 ),
-                'university_phone'       => array(
+                'university_phone'   => array(
                     'id'      => 'university_phone',
                     'type'    => 'text',
                     'title'   => __( 'Phone', 'ictu' ),
                     'default' => 'DT : 0208.3846254'
                 ),
-                'university_fax'         => array(
+                'university_fax'     => array(
                     'id'      => 'university_fax',
                     'type'    => 'text',
                     'title'   => __( 'Fax', 'ictu' ),
                     'default' => 'Fax : 0208.3846237'
                 ),
-                'chief_editor_label'     => array(
+                'chief_editor_label' => array(
                     'id'      => 'chief_editor_label',
                     'type'    => 'text',
                     'title'   => __( 'Chief Editor Label', 'ictu' ),
                     'default' => 'Trưởng ban biên tập'
                 ),
-                'chief_editor_name'      => array(
+                'chief_editor_name'  => array(
                     'id'      => 'chief_editor_name',
                     'type'    => 'text',
                     'title'   => __( 'Name Of Chief Editor', 'ictu' ),
                     'default' => 'PGS.TS Phùng Trọng Nghĩa'
                 ),
-                'chief_editor_phone'     => array(
+                'chief_editor_phone' => array(
                     'id'      => 'chief_editor_phone',
                     'type'    => 'text',
                     'title'   => __( 'Chief Editor Phone', 'ictu' ),
                     'default' => 'ĐT : 0208.3846254'
                 ),
-                'chief_editor_email'     => array(
+                'chief_editor_email' => array(
                     'id'      => 'chief_editor_email',
                     'type'    => 'text',
                     'title'   => __( 'Chief Editor Email', 'ictu' ),
                     'default' => 'Email : ptnghia@ictu.edu.vn'
                 ),
-                'chief_editor_note'      => array(
-                    'id'    => 'chief_editor_note',
-                    'type'  => 'text',
-                    'title' => __( 'Chief Editor Note', 'ictu' ),
-                ),
-                'chief_editor_note_link' => array(
-                    'id'    => 'chief_editor_note_link',
-                    'type'  => 'text',
-                    'title' => __( 'Chief Editor Note - Link', 'ictu' ),
-                ),
-                'organizations_logo'     => array(
+//                'chief_editor_note'      => array(
+//                    'id'    => 'chief_editor_note',
+//                    'type'  => 'text',
+//                    'title' => __( 'Chief Editor Note', 'ictu' ),
+//                ),
+//                'chief_editor_note_link' => array(
+//                    'id'    => 'chief_editor_note_link',
+//                    'type'  => 'text',
+//                    'title' => __( 'Chief Editor Note - Link', 'ictu' ),
+//                ),
+                'organizations_logo' => array(
                     'id'    => 'organizations_logo',
                     'type'  => 'gallery',
                     'title' => __( 'Organizations Logo', 'ictu' )
                 ),
-                'copyright_text'         => array(
+                'copyright_text'     => array(
                     'id'      => 'copyright_text',
                     'type'    => 'text',
                     'title'   => __( 'Copyright', 'ictu' ),
@@ -453,266 +1027,7 @@ if ( !function_exists( 'settings_theme_options' ) && class_exists( 'OVIC_Options
                 ),
             ),
         );
-        if ( class_exists( 'WooCommerce' ) ) {
-            $options['woocommerce_mains'] = array(
-                'name'     => 'woocommerce_mains',
-                'icon'     => 'fa fa-shopping-bag',
-                'title'    => esc_html__( 'WooCommerce', 'ictu' ),
-                'sections' => array(
-                    array(
-                        'title'  => esc_html__( 'Shop Page', 'ictu' ),
-                        'fields' => array(
-                            'shop_banner'              => array(
-                                'id'    => 'shop_banner',
-                                'type'  => 'image',
-                                'title' => __( 'Shop Banner', 'ictu' ),
-                            ),
-                            'shop_list_style'          => array(
-                                'id'      => 'shop_list_style',
-                                'type'    => 'image_select',
-                                'default' => 'grid',
-                                'title'   => esc_html__( 'Shop Layout', 'ictu' ),
-                                'desc'    => esc_html__( 'Select layout for shop product, product category archive.', 'ictu' ),
-                                'options' => array(
-                                    'grid' => get_theme_file_uri( 'assets/images/grid-display.png' ),
-                                    'list' => get_theme_file_uri( 'assets/images/list-display.png' ),
-                                ),
-                            ),
-                            'product_loop_columns'     => array(
-                                'id'         => 'product_loop_columns',
-                                'type'       => 'spinner',
-                                'title'      => esc_html__( 'Grid Columns', 'ictu' ),
-                                'max'        => 5,
-                                'min'        => 2,
-                                'step'       => 2,
-                                'unit'       => 'columns',
-                                'default'    => 4,
-                                'dependency' => array( 'shop_list_style', '==', 'grid' ),
-                            ),
-                            'product_per_page'         => array(
-                                'id'      => 'product_per_page',
-                                'type'    => 'spinner',
-                                'default' => '20',
-                                'unit'    => 'items',
-                                'title'   => esc_html__( 'Shop Per Page', 'ictu' ),
-                            ),
-                            'sidebar_shop_layout'      => array(
-                                'id'      => 'sidebar_shop_layout',
-                                'type'    => 'image_select',
-                                'title'   => esc_html__( 'Shop Sidebar', 'ictu' ),
-                                'desc'    => esc_html__( 'Select sidebar position on Shop Page.', 'ictu' ),
-                                'options' => array(
-                                    'left'  => get_theme_file_uri( 'assets/images/left-sidebar.png' ),
-                                    'right' => get_theme_file_uri( 'assets/images/right-sidebar.png' ),
-                                    'full'  => get_theme_file_uri( 'assets/images/no-sidebar.png' ),
-                                ),
-                                'default' => 'left',
-                            ),
-                            'shop_used_sidebar'        => array(
-                                'id'         => 'shop_used_sidebar',
-                                'type'       => 'select',
-                                'default'    => 'shop-widget-area',
-                                'title'      => esc_html__( 'Sidebar Used for Shop', 'ictu' ),
-                                'options'    => 'sidebars',
-                                'dependency' => array( 'sidebar_shop_layout', '!=', 'full' ),
-                            ),
-                            'shop_vendor_used_sidebar' => array(
-                                'id'         => 'shop_vendor_used_sidebar',
-                                'type'       => 'select',
-                                'title'      => esc_html__( 'Sidebar Used for Vendor', 'ictu' ),
-                                'options'    => 'sidebars',
-                                'dependency' => array( 'sidebar_shop_layout', '!=', 'full' ),
-                            ),
-                            'woocommerce_pagination'   => array(
-                                'id'      => 'woocommerce_pagination',
-                                'type'    => 'button_set',
-                                'title'   => esc_html__( 'Shop Pagination', 'ictu' ),
-                                'options' => array(
-                                    'pagination' => esc_html__( 'Pagination', 'ictu' ),
-                                    'load_more'  => esc_html__( 'Load More', 'ictu' ),
-                                    'infinite'   => esc_html__( 'Infinite Scrolling', 'ictu' ),
-                                ),
-                                'default' => 'pagination',
-                                'desc'    => esc_html__( 'Select style pagination on shop page.', 'ictu' ),
-                            ),
-                            //							'shop_content_top'          => array(
-                            //								'id'          => 'shop_content_top',
-                            //								'type'        => 'select',
-                            //								'options'     => 'page',
-                            //								'chosen'      => true,
-                            //								'ajax'        => true,
-                            //								'placeholder' => esc_html__( 'Select page', 'ictu' ),
-                            //								'title'       => esc_html__( 'Shop Content Top', 'ictu' ),
-                            //								'desc'        => esc_html__( 'Get shop content on top from page builder.', 'ictu' ),
-                            //							),
-                            //							'shop_content_top_position' => array(
-                            //								'id'      => 'shop_content_top_position',
-                            //								'type'    => 'select',
-                            //								'title'   => esc_html__( 'Content Top Position', 'ictu' ),
-                            //								'options' => array(
-                            //									'inside'  => esc_html__( 'Inside', 'ictu' ),
-                            //									'outside' => esc_html__( 'Outside', 'ictu' ),
-                            //								),
-                            //								'default' => 'inside',
-                            //							),
-                            //							'shop_content_bot'          => array(
-                            //								'id'          => 'shop_content_bot',
-                            //								'type'        => 'select',
-                            //								'options'     => 'page',
-                            //								'chosen'      => true,
-                            //								'ajax'        => true,
-                            //								'placeholder' => esc_html__( 'Select page', 'ictu' ),
-                            //								'title'       => esc_html__( 'Shop Content Bottom', 'ictu' ),
-                            //								'desc'        => esc_html__( 'Get shop content on bottom from page builder.', 'ictu' ),
-                            //							),
-                        ),
-                    ),
-                    array(
-                        'title'  => esc_html__( 'Shop Products', 'ictu' ),
-                        'fields' => array(
-                            'product_hover'      => array(
-                                'id'      => 'product_hover',
-                                'type'    => 'button_set',
-                                'title'   => esc_html__( 'Product Image Hover', 'ictu' ),
-                                'options' => array(
-                                    'none'   => esc_html__( 'None', 'ictu' ),
-                                    'change' => esc_html__( 'Change Image', 'ictu' ),
-                                    'zoom'   => esc_html__( 'Zoom Image', 'ictu' ),
-                                    'slide'  => esc_html__( 'Slide Image', 'ictu' ),
-                                ),
-                                'default' => 'none',
-                            ),
-                            'product_newness'    => array(
-                                'id'      => 'product_newness',
-                                'default' => '100',
-                                'type'    => 'spinner',
-                                'unit'    => 'days',
-                                'title'   => esc_html__( 'Products Newness', 'ictu' ),
-                            ),
-                            'enable_short_title' => array(
-                                'id'    => 'enable_short_title',
-                                'type'  => 'switcher',
-                                'title' => esc_html__( 'Enable Short Title on Mobile (<768px)', 'ictu' ),
-                            ),
-                        ),
-                    ),
-                    array(
-                        'title'  => esc_html__( 'Single Product', 'ictu' ),
-                        'fields' => array(
-                            'disable_zoom'           => array(
-                                'id'    => 'disable_zoom',
-                                'type'  => 'switcher',
-                                'title' => esc_html__( 'Disable Zoom Gallery', 'ictu' ),
-                            ),
-                            'disable_lightbox'       => array(
-                                'id'    => 'disable_lightbox',
-                                'type'  => 'switcher',
-                                'title' => esc_html__( 'Disable Lightbox Gallery', 'ictu' ),
-                            ),
-                            'sidebar_product_layout' => array(
-                                'id'      => 'sidebar_product_layout',
-                                'type'    => 'image_select',
-                                'title'   => __( 'Single Product Layout', 'ictu' ),
-                                'desc'    => __( 'Select sidebar position on Shop Page.', 'ictu' ),
-                                'options' => array(
-                                    'left'  => get_theme_file_uri( 'assets/images/left-sidebar.png' ),
-                                    'right' => get_theme_file_uri( 'assets/images/right-sidebar.png' ),
-                                    'full'  => get_theme_file_uri( 'assets/images/no-sidebar.png' ),
-                                ),
-                                'default' => 'left',
-                            ),
-                            'product_used_sidebar'   => array(
-                                'id'         => 'product_used_sidebar',
-                                'type'       => 'select',
-                                'default'    => 'product-widget-area',
-                                'title'      => esc_html__( 'Sidebar used for single product', 'ictu' ),
-                                'options'    => 'sidebars',
-                                'dependency' => array( 'sidebar_product_layout', '!=', 'full' ),
-                            )
-                        )
-                    ),
-                    array(
-                        'title'  => esc_html__( 'Related Products', 'ictu' ),
-                        'fields' => array(
-                            'woo_related_enable'  => array(
-                                'id'      => 'woo_related_enable',
-                                'type'    => 'button_set',
-                                'default' => 'enable',
-                                'options' => array(
-                                    'enable'  => esc_html__( 'Enable', 'ictu' ),
-                                    'disable' => esc_html__( 'Disable', 'ictu' ),
-                                ),
-                                'title'   => esc_html__( 'Enable Related Products', 'ictu' ),
-                            ),
-                            'woo_related_title'   => array(
-                                'id'         => 'woo_related_title',
-                                'title'      => esc_html__( 'Disable Title', 'ictu' ),
-                                'type'       => 'button_set',
-                                'default'    => 'enable',
-                                'options'    => array(
-                                    'enable'  => esc_html__( 'Enable', 'ictu' ),
-                                    'disable' => esc_html__( 'Disable', 'ictu' ),
-                                ),
-                                'dependency' => array( 'woo_related_enable', '==', 'enable' ),
-                            ),
-                            'woo_related_columns' => array(
-                                'id'         => 'woo_related_columns',
-                                'type'       => 'spinner',
-                                'title'      => esc_html__( 'Items Columns', 'ictu' ),
-                                'max'        => 8,
-                                'min'        => 4,
-                                'step'       => 1,
-                                'unit'       => 'columns',
-                                'default'    => 4,
-                                'dependency' => array( 'woo_related_enable', '==', 'enable' ),
-                            ),
-                            'woo_related_perpage' => array(
-                                'id'         => 'woo_related_perpage',
-                                'type'       => 'spinner',
-                                'title'      => esc_html__( 'Items Per Page', 'ictu' ),
-                                'unit'       => 'items',
-                                'default'    => '6',
-                                'dependency' => array( 'woo_related_enable', '==', 'enable' ),
-                            ),
-                        ),
-                    ),
-                    /* array(
-                         'title'  => esc_html__('Upsell Products', 'ictu'),
-                         'fields' => array(
-                             'woo_upsell_enable'  => array(
-                                 'id'      => 'woo_upsell_enable',
-                                 'type'    => 'button_set',
-                                 'default' => 'enable',
-                                 'options' => array(
-                                     'enable'  => esc_html__('Enable', 'ictu'),
-                                     'disable' => esc_html__('Disable', 'ictu'),
-                                 ),
-                                 'title'   => esc_html__('Enable Upsell Products', 'ictu'),
-                             ),
-                             'woo_upsell_title'   => array(
-                                 'id'         => 'woo_upsell_title',
-                                 'type'       => 'text',
-                                 'title'      => esc_html__('Title', 'ictu'),
-                                 'default'    => esc_html__('Upsell Products', 'ictu'),
-                                 'dependency' => array('woo_upsell_enable', '==', 'enable'),
-                             ),
-                             'woo_upsell_columns' => array(
-                                 'id'         => 'woo_upsell_columns',
-                                 'type'       => 'spinner',
-                                 'title'      => esc_html__('Items Columns', 'ictu'),
-                                 'max'        => 8,
-                                 'min'        => 4,
-                                 'step'       => 1,
-                                 'unit'       => 'columns',
-                                 'default'    => 4,
-                                 'dependency' => array('woo_upsell_enable', '==', 'enable'),
-                             ),
-                         ),
-                     ),*/
-                ),
-            );
-        }
-        $options['social']     = array(
+        $options['social']       = array(
             'name'   => 'social',
             'icon'   => 'fa fa-users',
             'title'  => esc_html__( 'Social', 'ictu' ),
@@ -773,7 +1088,7 @@ if ( !function_exists( 'settings_theme_options' ) && class_exists( 'OVIC_Options
                 ),
             ),
         );
-        $options['typography'] = array(
+        $options['typography']   = array(
             'name'   => 'typography',
             'icon'   => 'fa fa-font',
             'title'  => esc_html__( 'Typography', 'ictu' ),
@@ -801,7 +1116,7 @@ if ( !function_exists( 'settings_theme_options' ) && class_exists( 'OVIC_Options
                 ),
             ),
         );
-        $options['backup']     = array(
+        $options['backup']       = array(
             'name'   => 'backup',
             'icon'   => 'fa fa-bold',
             'title'  => esc_html__( 'Backup / Reset', 'ictu' ),

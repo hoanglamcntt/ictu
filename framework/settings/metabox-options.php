@@ -22,12 +22,6 @@ if (!function_exists('theme_metabox_options') && class_exists('OVIC_Metabox')) {
                 array(
                     'name'   => 'page_option',
                     'fields' => array(
-                        'page_breadcrumbs'    => array(
-                            'id'      => 'page_breadcrumbs',
-                            'type'    => 'switcher',
-                            'title'   => __('Hide Page Breadcrumbs', 'ictu'),
-                            'default' => false
-                        ),
                         'sidebar_page_layout' => array(
                             'id'         => 'sidebar_page_layout',
                             'type'       => 'image_select',

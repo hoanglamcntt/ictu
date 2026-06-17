@@ -136,10 +136,10 @@ if ( !class_exists( 'Ictu_Baochi' ) ) {
         {
             if ( $column_name === 'baochi_order' ) {
                 $baochi_order = get_post_meta( get_the_ID(), 'custom_baochi_order', true );
-                echo $baochi_order ?? '';
+                echo esc_html( $baochi_order ) ?? '';
             }
         }
-        
+
         function make_column_sortable( $columns )
         {
             $columns['baochi_order'] = 'baochi_order';

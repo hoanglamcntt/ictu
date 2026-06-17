@@ -1,43 +1,48 @@
-<?php defined('ABSPATH') || exit;
-if (!function_exists('theme_enqueue_inline_css')) {
+<?php defined( 'ABSPATH' ) || exit;
+if ( !function_exists( 'theme_enqueue_inline_css' ) ) {
     function theme_enqueue_inline_css()
     {
-        $css                    = get_theme_option('ace_style', '');
-        $main_color             = apply_filters('theme_main_color', get_theme_option('main_color', '#006cb5'));
-        $main_color_hover       = apply_filters('theme_main_color_hover', get_theme_option('main_color_hover', '#f7aa23'));
-        $text_color             = apply_filters('theme_text_color', get_theme_option('text_color', '#333333'));
-        $container              = apply_filters('theme_main_container', get_theme_option('main_container', '1322'));
-        $container_with_padding = $container ? $container + 30 : 0;
-        $css                    .= '
-        body{ 
-            --main-color: ' . $main_color . '; 
-            --main-color-hover: ' . $main_color_hover . '; 
-            --text-color: ' . $text_color . '; 
-            --container-width: ' . $container . 'px; 
-            --container-with-padding: ' . $container_with_padding . 'px; 
-        } ';
-        if ($container_with_padding) {
-            $media = $container_with_padding < 1200 ? 1200 : $container_with_padding;
+        $css                    = html_entity_decode( get_theme_option( 'ace_style', '' ) );
+        $arr_option             = array(
+            array( 'main_color', '#006cb5', '--main-cl', ';' ),
+            array( 'main_color_hover', '#f7aa23', '--main-cl-hover', ';' ),
+            array( 'text_color', '#333333', '--text-color', ';' ),
+        );
+        $container              = apply_filters( 'theme_main_container', get_theme_option( 'main_container', '1322' ) );
+        $css                    .= 'body{';
+        foreach ( $arr_option as $item ) {
+            $option = get_theme_option( $item[0], $item[1] );
+            if ( '' == $item[1] ) {
+                if ( !empty( $option ) ) {
+                    $css .= $item[2] . ':' . $option . $item[3];
+                }
+            } else if ( strtolower( $option ) != strtolower( $item[1] ) ) {
+                $css .= $item[2] . ':' . $option . $item[3];
+            }
+            if ( !empty( $option ) && in_array( $item[0], array( 'main_color', 'main_color_2' ) ) && $option != 'transparent' ) {
+                $css .=
+                    $item[2] . '-r:' . Masino_Colors::hexToRgb( $option )['r'] . ';' .
+                    $item[2] . '-g:' . Masino_Colors::hexToRgb( $option )['g'] . ';' .
+                    $item[2] . '-b:' . Masino_Colors::hexToRgb( $option )['b'] . ';' .
+                    $item[2] . '-h:' . Masino_Colors::hexToHsl( $option )['h'] . ';' .
+                    $item[2] . '-s:' . Masino_Colors::hexToHsl( $option )['s'] . '%;' .
+                    $item[2] . '-l:' . Masino_Colors::hexToHsl( $option )['l'] . '%;';
+            }
+        }
+        $css .= '}';
+        if ( $container ) {
             $css   .= '
-            @media (min-width: ' . $media . 'px){
+            @media (min-width: 1200px){
                 body{
                     --main-container: ' . $container . 'px;
-                }
-                .elementor-section-stretched.elementor-section-boxed:not(.elementor-has-width) > .elementor-container,
-                .site > .elementor > .elementor-inner,
-                .container{
-                    width: ' . $container_with_padding . 'px;
-                }
-                .box-nav-vertical .vertical-menu > .menu-item > .megamenu{
-                    max-width: ' . ($container - 210) . 'px !important;
                 }
             }
             ';
         }
 
-        $css = preg_replace('/\s+/', ' ', $css);
-        wp_add_inline_style('theme-main', apply_filters('theme_custom_inline_css', $css, $main_color, $text_color, $container));
+        $css = preg_replace( '/\s+/', ' ', $css );
+        wp_add_inline_style( 'theme-main', apply_filters( 'theme_custom_inline_css', $css ) );
     }
 
-    add_action('wp_enqueue_scripts', 'theme_enqueue_inline_css', 999);
+    add_action( 'wp_enqueue_scripts', 'theme_enqueue_inline_css', 999 );
 }

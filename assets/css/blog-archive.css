@@ -56,7 +56,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--main-color);
+    background-color: var(--main-cl);
     opacity: .2;
 }
 .article-in-loop .post-inner__thumb .image-placeholder{
@@ -121,13 +121,13 @@
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    background-color: var(--main-color);
+    background-color: var(--main-cl);
     font-weight: 500;
     font-size: 17px;
 }
 .pagination-nav ul.page-numbers span.current,
 .pagination-nav ul.page-numbers a:hover{
-    background-color: var(--main-color-hover);
+    background-color: var(--main-cl-hover);
 }
 .pagination-nav ul.page-numbers a.prev,
 .pagination-nav ul.page-numbers a.next{
