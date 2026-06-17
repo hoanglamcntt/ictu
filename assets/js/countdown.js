@@ -1,0 +1,91 @@
+( function ( $ ) {
+    'use strict';
+
+    $.fn.avocado_countdown = function () {
+        var $this        = $( this ),
+            $date_format = function ( data, number ) {
+                var text_number = '',
+                    text_format = '';
+
+                if ( data.days_text !== undefined ) {
+                    text_number = '%D';
+                    if ( number === false ) {
+                        text_number = '00';
+                    }
+                    text_format += '<span class="countdown--item days"><span class="number">' + text_number + '</span><span class="text">' + data.days_text + '</span></span>';
+                }
+                if ( data.hrs_text !== undefined ) {
+                    text_number = '%H';
+                    if ( data.days_text === undefined ) {
+                        text_number = '%I';
+                    }
+                    if ( number === false ) {
+                        text_number = '00';
+                    }
+                    text_format += '<span class="countdown--item hours"><span class="number">' + text_number + '</span><span class="text">' + data.hrs_text + '</span></span>';
+                }
+                if ( data.mins_text !== undefined ) {
+                    text_number = '%M';
+                    if ( data.hrs_text === undefined ) {
+                        text_number = '%N';
+                    }
+                    if ( number === false ) {
+                        text_number = '00';
+                    }
+                    text_format += '<span class="countdown--item mins"><span class="number">' + text_number + '</span><span class="text">' + data.mins_text + '</span></span>';
+                }
+                if ( data.secs_text !== undefined ) {
+                    text_number = '%S';
+                    if ( data.mins_text === undefined ) {
+                        text_number = '%T';
+                    }
+                    if ( number === false ) {
+                        text_number = '00';
+                    }
+                    text_format += '<span class="countdown--item secs"><span class="number">' + text_number + '</span><span class="text">' + data.secs_text + '</span></span>';
+                }
+
+                return text_format;
+            };
+
+        $this.on( 'avocado_countdown', function () {
+            $this.each( function () {
+                var el             = $( this ),
+                    data           = el.data( 'params' ),
+                    text_countdown = '';
+
+                el.countdown( el.data( 'datetime' ), { elapse : true } ).on( 'update.countdown', function ( event ) {
+                    if ( event.elapsed ) {
+                        text_countdown = event.strftime( $date_format( data, false ) );
+                    } else {
+                        text_countdown = event.strftime( $date_format( data, true ) );
+                    }
+                    el.html( text_countdown );
+                } );
+            } );
+        } ).trigger( 'avocado_countdown' );
+    };
+
+    window.addEventListener( "load", function load () {
+        /**
+         * remove listener, no longer needed
+         * */
+        window.removeEventListener( "load", load, false );
+        /**
+         * start functions
+         * */
+
+        $( '.js_countdown' ).avocado_countdown();
+
+    }, false );
+
+    //
+    // Elementor scripts
+    //
+    $( window ).on( 'elementor/frontend/init', function () {
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/global', function ( $scope, $ ) {
+            $scope.find( '.js_countdown' ).avocado_countdown();
+        } );
+    } );
+
+} )( window.jQuery );

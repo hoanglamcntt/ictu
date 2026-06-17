@@ -1,0 +1,110 @@
+.ovic-block-showcase {
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 37px 0 0;
+}
+
+.ovic-block-showcase__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.ovic-block-showcase__elm {
+    background-color: var(--main-color);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.ovic-block-showcase__inner {
+    width: 182px;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    padding: 0 5px 26px;
+}
+
+.ovic-block-showcase__wrap-media {
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ovic-block-showcase__text {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.2;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@media (max-width: 1199px) {
+    .ovic-block-showcase__inner {
+        width: 160px;
+    }
+
+    .ovic-block-showcase__inner img {
+        width: 45px;
+    }
+
+    .ovic-block-showcase__text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ovic-block-showcase__inner {
+        width: 130px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ovic-block-showcase {
+        padding-top: 0;
+    }
+
+    .ovic-block-showcase__list {
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: auto;
+    }
+
+    .ovic-block-showcase__elm {
+        width: 50%;
+        padding: 10px;
+        background-color: transparent;
+    }
+
+    .ovic-block-showcase__elm .ovic-block-showcase__inner {
+        width: 100%;
+        background-color: var(--main-color);
+        border-radius: 14px;
+        text-align: center;
+    }
+
+    .ovic-block-showcase__elm .ovic-block-showcase__inner br {
+        display: none;
+    }
+
+    .ovic-block-showcase__elm:last-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .ovic-block-showcase__elm .ovic-block-showcase__inner br {
+        display: inline;
+    }
+}

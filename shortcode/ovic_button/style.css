@@ -1,0 +1,12 @@
+.wrap-ovic-button--style-01 {
+    display: block;
+    text-align: center;
+}
+
+.wrap-ovic-button .ovic-button__btn {
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    padding: 8px;
+}

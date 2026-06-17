@@ -1,0 +1,92 @@
+/* flickity-fade */
+.flickity-enabled.is-fade .flickity-slider > .ovic-slide__item,
+.flickity-enabled.is-fade .flickity-slider {
+    transform: translateX(0) !important;
+    left: 0 !important;
+}
+
+.flickity-enabled.is-fade .flickity-slider > .ovic-slide__item {
+    pointer-events: none;
+    z-index: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity 1.2s ease-out;
+    -moz-transition: opacity 1.2s ease-out;
+    -ms-transition: opacity 1.2s ease-out;
+    -o-transition: opacity 1.2s ease-out;
+    transition: opacity 1.2s ease-out;
+}
+
+.flickity-enabled.is-fade .flickity-slider > .ovic-slide__item.is-selected {
+    pointer-events: auto;
+    z-index: 5 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+.ovic-slide-block--layout-01 {
+    width: 100%;
+    display: block;
+}
+
+.ovic-slide-block--layout-01:not(.ovic-slide-init) .ovic-slide__item:not(:first-child) {
+    display: none;
+}
+
+.ovic-slide-block--layout-01 .ovic-slide__item {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ovic-slide-block--layout-01 .ovic-slide__item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+.ovic-slide-block--layout-01 .flickity-page-dots {
+    bottom: 50px;
+    line-height: 0;
+}
+
+.ovic-slide-block--layout-01 .flickity-page-dots .dot {
+    width: auto;
+    height: auto;
+    border: 1px solid #d3d3d3;
+    border-radius: 999px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    font-size: 0;
+    line-height: 0;
+    padding: 4px;
+    opacity: 1;
+    margin: 0 10px;
+}
+
+.ovic-slide-block--layout-01 .flickity-page-dots .dot::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #d3d3d3;
+    border-radius: 999px;
+}
+
+.ovic-slide-block--layout-01 .flickity-page-dots .is-selected {
+    border-color: var(--main-color-hover);
+}
+
+.ovic-slide-block--layout-01 .flickity-page-dots .is-selected::before {
+    background-color: var(--main-color-hover);
+}
+
+@media (max-width: 767px) {
+    .ovic-slide-block--layout-01 .flickity-page-dots {
+        bottom: 20px;
+    }
+}

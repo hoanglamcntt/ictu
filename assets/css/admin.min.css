@@ -1,0 +1,56 @@
+.ovic-field-text input{
+    width: 100%;
+}
+body table.wp-list-table td.column-thumb img{
+    max-width: 60px;
+    max-height: 60px;
+}
+.button-carparts{
+    position: relative !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    font-weight: 700 !important;
+    padding: 13px 50px !important;
+    border: none !important;
+    background-color: transparent !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    border-radius: 0 !important;
+    z-index: 1 !important;
+    filter: none !important;
+    font-family: inherit !important;
+}
+.ovic-field-text input[type=text]:placeholder-shown:not(:focus){
+    opacity: .5;
+    border-color: red;
+}
+.button-carparts:not(:hover)::before{
+    transform: skew(-30deg);
+}
+.button-carparts::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: .2s;
+}
+.not-administrator #adminmenu #toplevel_page_rank-math{
+    display: none;
+}
+#wp-toolbar #wp-admin-bar-new-content .wp-admin-bar-new-ovic_menu,
+#wp-toolbar #wp-admin-bar-new-content .wp-admin-bar-new-elementor_library,
+#wp-toolbar #wp-admin-bar-comments,
+#wpfooter #footer-left,
+.not-administrator #dashboard-widgets-wrap #latest-comments,
+.not-administrator #dashboard-widgets-wrap #dashboard_primary,
+.not-administrator #dashboard-widgets-wrap #e-dashboard-overview,
+.not-administrator #adv-settings label[for="dashboard_primary-hide"],
+.not-administrator #adv-settings label[for="e-dashboard-overview-hide"]{
+    display: none;
+}

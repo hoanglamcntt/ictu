@@ -1,0 +1,2379 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ICTU\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-07 01:45+0000\n"
+"PO-Revision-Date: 2022-01-25 02:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: Tiếng Việt\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2\n"
+"X-Domain: ictu"
+
+#: templates/blog/blog-shortcode-bak/content-blog-style-10.php:16
+msgid "% Comment(s)"
+msgstr ""
+
+#. 1: comment date, 2: comment time
+#: framework/blog-functions.php:298
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. 1: reviews count 2: product name
+#: woocommerce/single-product-reviews.php:123
+#, php-format
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] ""
+
+#: framework/settings/theme-options.php:781
+msgid "%n transient database entries have been deleted."
+msgstr ""
+
+#: framework/blog-functions.php:341
+msgid "..."
+msgstr ""
+
+#: templates/blog/blog-shortcode-bak/content-blog-style-10.php:14
+msgid "0 Comment(s)"
+msgstr ""
+
+#: templates/blog/blog-shortcode-bak/content-blog-style-10.php:15
+msgid "1 Comment(s)"
+msgstr ""
+
+#: framework/visual-composer.php:813
+msgid "10px"
+msgstr ""
+
+#: framework/visual-composer.php:814
+msgid "20px"
+msgstr ""
+
+#: framework/visual-composer.php:815
+msgid "30px"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:219
+msgid "404 Not Found"
+msgstr ""
+
+#: framework/visual-composer.php:816
+msgid "40px"
+msgstr ""
+
+#: framework/visual-composer.php:817
+msgid "50px"
+msgstr ""
+
+#: framework/visual-composer.php:818
+msgid "60px"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-product-categories.php:38
+msgid "A list or dropdown of product categories."
+msgstr ""
+
+#. Description of the theme
+msgid "a wordpress theme for education"
+msgstr "Chủ đề wordpress dành cho những webside giáo dục"
+
+#: shortcode/ovic_slide/config/elementor.php:165
+msgid "Adaptive Height"
+msgstr ""
+
+#: framework/settings/theme-options.php:234
+msgid "Add New Menu Item"
+msgstr ""
+
+#: framework/settings/theme-options.php:688
+msgid "Add New Social"
+msgstr ""
+
+#: functions.php:113
+msgid "Add widgets here to appear in your blog sidebar."
+msgstr ""
+
+#: functions.php:122
+msgid "Add widgets here to appear in your post sidebar."
+msgstr ""
+
+#: framework/settings/theme-options.php:299
+msgid "Address"
+msgstr ""
+
+#: framework/settings/metabox-options.php:369
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#: framework/visual-composer.php:153
+msgid "All"
+msgstr ""
+
+#: framework/settings/theme-options.php:783
+msgid "All transient related database entries will be deleted."
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:220
+msgid "Archives"
+msgstr ""
+
+#: framework/settings/metabox-options.php:245
+msgid "Article"
+msgstr "Tin tức"
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:157
+msgid "Article link"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-featured-products.php:31
+msgid "ASC"
+msgstr ""
+
+#: framework/visual-composer.php:536
+msgid "Ascending"
+msgstr ""
+
+#: framework/visual-composer.php:790
+msgid "Attribute"
+msgstr ""
+
+#: framework/settings/metabox-options.php:279
+msgid "Audio source"
+msgstr ""
+
+#: framework/visual-composer.php:521
+msgid "Author"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:191
+msgid "AutoPlay"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:204
+msgid "AutoPlay time"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:104
+msgid "Avatar"
+msgstr ""
+
+#: framework/theme-functions.php:388
+msgid "Avatar Mobile"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:74
+msgid "Average"
+msgstr ""
+
+#: framework/visual-composer.php:529
+msgid "Average Rating"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:96
+#: shortcode/ovic_whychooseus/config/elementor.php:57
+msgid "Background Color"
+msgstr "Màu nền"
+
+#: framework/visual-composer.php:587
+msgid "Background Image"
+msgstr ""
+
+#: framework/visual-composer.php:338
+msgid "Background Slide"
+msgstr ""
+
+#: framework/visual-composer.php:337
+msgid "Background Zoom"
+msgstr ""
+
+#: framework/settings/theme-options.php:771
+msgid "Backup / Reset"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:105
+msgid "Banner"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:96
+#: shortcode/ovic_trainingprogram/config/elementor.php:63
+msgid "Banners"
+msgstr ""
+
+#: framework/theme-functions.php:721
+msgid "Bản thỏa thuận"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:41
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: framework/visual-composer.php:696
+msgid "Best Selling Products"
+msgstr ""
+
+#: framework/theme-functions.php:571
+msgid "Bio-Fonts"
+msgstr ""
+
+#: framework/theme-functions.php:583
+msgid "Bio-Icofont"
+msgstr ""
+
+#: framework/theme-functions.php:717
+msgid "Biên bản"
+msgstr ""
+
+#: framework/settings/theme-options.php:354
+msgid "Blog"
+msgstr ""
+
+#: framework/settings/theme-options.php:357
+msgid "Blog Page"
+msgstr ""
+
+#: framework/settings/theme-options.php:382
+msgid "Blog Pagination"
+msgstr ""
+
+#: framework/settings/theme-options.php:362
+msgid "Blog Sidebar"
+msgstr ""
+
+#: framework/visual-composer.php:887 framework/visual-composer.php:889
+msgid "Bootstrap Settings"
+msgstr ""
+
+#: framework/visual-composer.php:345
+msgid "Border Plus 1"
+msgstr ""
+
+#: framework/visual-composer.php:346
+msgid "Border Plus 2"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:157
+msgid "Border Radius"
+msgstr ""
+
+#: framework/visual-composer.php:343
+msgid "Border Scale 1"
+msgstr ""
+
+#: framework/visual-composer.php:344
+msgid "Border Scale 2"
+msgstr ""
+
+#: framework/visual-composer.php:342
+msgid "Border Zoom"
+msgstr ""
+
+#: framework/visual-composer.php:335
+msgid "Bounce In"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:217
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:216
+msgid "Browse:"
+msgstr ""
+
+#: framework/visual-composer.php:680
+msgid "Button"
+msgstr "Nút bấm"
+
+#: shortcode/ovic_posts/config/elementor.php:108
+msgid "Button Label"
+msgstr "Nhãn của nút bấm"
+
+#: shortcode/ovic_posts/config/elementor.php:119
+msgid "Button Link"
+msgstr "Link của nút bấm"
+
+#: templates/blog/blog-shortcode-bak/content-blog-style-03.php:13
+#: templates/blog/blog-shortcode-bak/content-blog-style-04.php:10
+#: templates/blog/blog-shortcode-bak/content-blog-style-05.php:9
+#: templates/blog/blog-shortcode-bak/content-blog-style-06.php:13
+#: templates/blog/blog-shortcode-bak/content-blog-style-08.php:12
+#: templates/blog/blog-shortcode-bak/content-blog-style-09.php:13
+#: templates/blog/blog-shortcode-bak/content-blog-style-10.php:10
+#: templates/blog/blog-shortcode-bak/content-blog-style-11.php:10
+msgid "by"
+msgstr ""
+
+#: framework/blog-functions.php:424
+msgid "Bài viết cùng chuyên mục"
+msgstr ""
+
+#: framework/theme-functions.php:716
+msgid "Báo cáo"
+msgstr ""
+
+#: framework/theme-functions.php:720
+msgid "Bản ghi nhớ"
+msgstr ""
+
+#: framework/settings/metabox-options.php:251
+msgid "Calendar"
+msgstr ""
+
+#: framework/settings/enqueue.php:610
+msgid "Can not Load Data."
+msgstr ""
+
+#: shortcode/ovic_posts/config/elementor.php:51
+msgid "Carousel"
+msgstr "Thanh trượt"
+
+#: framework/visual-composer.php:825 framework/visual-composer.php:847
+#: framework/visual-composer.php:858 framework/visual-composer.php:869
+#: framework/visual-composer.php:877 framework/visual-composer.php:879
+msgid "Carousel Settings"
+msgstr "Cài đặt thanh trượt"
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:34
+#: shortcode/ovic_posts/config/elementor.php:60
+msgid "Category"
+msgstr "Danh mục bài viết"
+
+#: framework/widgets/class-theme-widget-product-categories.php:47
+msgid "Category order"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/ovic_reviewtwentyyears.php:35
+msgid "CBGV trình độ cao"
+msgstr ""
+
+#: framework/settings/theme-options.php:543
+msgid "Change Image"
+msgstr ""
+
+#: framework/settings/theme-options.php:335
+msgid "Chief Editor Email"
+msgstr ""
+
+#: framework/settings/theme-options.php:317
+msgid "Chief Editor Label"
+msgstr ""
+
+#: framework/settings/theme-options.php:329
+msgid "Chief Editor Phone"
+msgstr ""
+
+#: framework/visual-composer.php:704
+msgid "Choose the target to filter products"
+msgstr ""
+
+#: framework/theme-functions.php:711
+msgid "Chương trình"
+msgstr ""
+
+#: framework/theme-functions.php:707
+msgid "Chỉ thị"
+msgstr ""
+
+#: framework/settings/metabox-options.php:349
+msgid "Chức vụ"
+msgstr ""
+
+#: framework/visual-composer.php:431
+msgid "Col 1"
+msgstr ""
+
+#: framework/visual-composer.php:432
+msgid "Col 2"
+msgstr ""
+
+#: framework/visual-composer.php:433
+msgid "Col 3"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:80
+msgid "Color"
+msgstr "Màu sắc"
+
+#: comments.php:28
+msgid "Comment *"
+msgstr ""
+
+#: framework/visual-composer.php:525
+msgid "Comment count"
+msgstr ""
+
+#: templates-parts/header-user.php:61
+msgid "Comments"
+msgstr ""
+
+#: comments.php:95
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: number of comments, 2: post title
+#: comments.php:57
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+
+#. %s: post title
+#: comments.php:53
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: framework/visual-composer.php:862
+msgid "Content Overflow"
+msgstr ""
+
+#: templates/blog/blog-shortcode/content-blog-style-01.php:27
+#: templates/blog/blog-shortcode/content-blog-style-03.php:36
+#: templates/blog/blog-shortcode/content-blog-style-04.php:35
+#: templates/blog/blog-shortcode/content-blog-style-05.php:32
+#: templates/blog/blog-shortcode/content-blog-style-08.php:20
+msgid "Continue Reading"
+msgstr ""
+
+#. %s: Name of current post
+#: framework/blog-functions.php:356
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: framework/settings/metabox-options.php:282
+msgid "Copy url source audio or iframe"
+msgstr ""
+
+#: framework/settings/theme-options.php:346
+msgid "Copyright"
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:103
+msgid "Custom"
+msgstr ""
+
+#: framework/visual-composer.php:69 framework/visual-composer.php:180
+msgid "Custom Fonts"
+msgstr ""
+
+#: framework/theme-functions.php:701
+msgid "Công văn"
+msgstr ""
+
+#: framework/theme-functions.php:719
+msgid "Công điện"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:715 framework/classes/breadcrumbs.php:1104
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: framework/visual-composer.php:519
+msgid "Date"
+msgstr ""
+
+#: framework/visual-composer.php:812 framework/visual-composer.php:832
+msgid "Default"
+msgstr ""
+
+#: framework/settings/helpers.php:956 framework/settings/helpers.php:958
+msgid "Default Form"
+msgstr ""
+
+#: framework/settings/theme-options.php:781
+#: framework/settings/theme-options.php:782
+msgid "Delete Transients"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-featured-products.php:32
+msgid "DESC"
+msgstr ""
+
+#: framework/visual-composer.php:535
+msgid "Descending"
+msgstr ""
+
+#: widgets/review-years/Review_Years_Widget.php:87
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:112
+#: shortcode/ovic_testimonial/config/elementor.php:133
+#: shortcode/ovic_whychooseus/config/elementor.php:125
+msgid "Description"
+msgstr ""
+
+#: framework/visual-composer.php:786
+#, php-format
+msgid "Designates the ascending or descending order. More at %s."
+msgstr ""
+
+#: framework/settings/theme-options.php:220
+msgid "Desktop"
+msgstr ""
+
+#: framework/settings/theme-options.php:607
+#: framework/settings/theme-options.php:618
+msgid "Disable"
+msgstr ""
+
+#: framework/settings/theme-options.php:574
+msgid "Disable Lightbox Gallery"
+msgstr ""
+
+#: framework/settings/theme-options.php:613
+msgid "Disable Title"
+msgstr ""
+
+#: framework/settings/theme-options.php:569
+msgid "Disable Zoom Gallery"
+msgstr ""
+
+#: framework/visual-composer.php:575
+msgid "Display Products"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:15
+msgid "Display your support system"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:148
+msgid "Diện tích sà xây dựng"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/ovic_reviewtwentyyears.php:38
+msgid "Diện tích sàn XD"
+msgstr ""
+
+#: framework/settings/metabox-options.php:250
+msgid "Document"
+msgstr ""
+
+#: framework/woo-functions.php:85
+msgid "Download catalogue"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:178
+msgid "Draggable"
+msgstr ""
+
+#: framework/theme-functions.php:715
+msgid "Dự án"
+msgstr ""
+
+#: framework/blog-functions.php:306
+msgid "Edit"
+msgstr ""
+
+#: framework/settings/helpers.php:156
+msgid "Edit This"
+msgstr ""
+
+#: framework/visual-composer.php:327
+msgid "Effect"
+msgstr ""
+
+#: framework/settings/theme-options.php:253
+msgid "Element Type"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:61
+#: shortcode/ovic_testimonial/config/elementor.php:74
+msgid "Elements"
+msgstr "Các phần tử"
+
+#: woocommerce/single-product-reviews.php:61
+#: framework/widgets/class-theme-widget-support-systems.php:27
+msgid "Email"
+msgstr ""
+
+#: comments.php:25
+msgid "Email *"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:77
+msgid "Email:"
+msgstr ""
+
+#: framework/settings/theme-options.php:606
+#: framework/settings/theme-options.php:617
+msgid "Enable"
+msgstr ""
+
+#: shortcode/ovic_posts/config/elementor.php:93
+#: shortcode/ovic_slide/config/elementor.php:126
+msgid "Enable Dots"
+msgstr ""
+
+#: shortcode/ovic_posts/config/elementor.php:79
+#: shortcode/ovic_slide/config/elementor.php:113
+msgid "Enable Nav"
+msgstr ""
+
+#: framework/settings/metabox-options.php:78
+msgid "Enable Page Banner"
+msgstr ""
+
+#: framework/settings/theme-options.php:609
+msgid "Enable Related Products"
+msgstr ""
+
+#: framework/settings/theme-options.php:559
+msgid "Enable Short Title on Mobile (<768px)"
+msgstr ""
+
+#: framework/visual-composer.php:450 framework/visual-composer.php:719
+msgid "Enter List of Products"
+msgstr ""
+
+#: templates-parts/header-user.php:50
+msgid "Entries"
+msgstr ""
+
+#: framework/visual-composer.php:176
+msgid "Entypo"
+msgstr ""
+
+#: framework/settings/metabox-options.php:246
+msgid "Event"
+msgstr "Sự kiện"
+
+#: framework/theme-functions.php:360
+msgid "Example@email.com"
+msgstr ""
+
+#: framework/settings/metabox-options.php:56
+msgid "Extra Class"
+msgstr ""
+
+#: framework/visual-composer.php:387
+msgid "Extra class name"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:55
+msgid "Facebook"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:214
+msgid "Fade"
+msgstr ""
+
+#: framework/visual-composer.php:334
+msgid "Faded In"
+msgstr ""
+
+#: framework/settings/theme-options.php:311
+msgid "Fax"
+msgstr ""
+
+#: framework/visual-composer.php:694
+msgid "Feature Products"
+msgstr ""
+
+#: framework/settings/metabox-options.php:370
+msgid "Featured Post"
+msgstr "Bài viết nổi bật"
+
+#: framework/widgets/class-theme-widget-featured-products.php:53
+msgid "Featured Products"
+msgstr ""
+
+#: framework/visual-composer.php:798
+msgid "Filter"
+msgstr ""
+
+#: framework/visual-composer.php:351
+msgid "Flashlight"
+msgstr ""
+
+#: framework/visual-composer.php:173
+msgid "Font Awesome"
+msgstr ""
+
+#: framework/settings/theme-options.php:280
+msgid "Footer"
+msgstr ""
+
+#: functions.php:68
+msgid "Footer Bottom Center"
+msgstr ""
+
+#: functions.php:70
+msgid "Footer Bottom Right"
+msgstr ""
+
+#: framework/settings/theme-options.php:285
+msgid "Footer template"
+msgstr ""
+
+#: functions.php:67
+msgid "Footer Top Center"
+msgstr ""
+
+#: functions.php:69
+msgid "Footer Top Right"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:139
+msgid "Free Scroll"
+msgstr ""
+
+#: framework/visual-composer.php:65
+msgid "Full Screen"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width"
+msgstr "Chiều dài tối đa"
+
+#: framework/settings/metabox-options.php:249
+#: widgets/review-years/Review_Years_Widget.php:77
+#: shortcode/ovic_banner/config/elementor.php:53
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:102
+msgid "Gallery"
+msgstr ""
+
+#: framework/settings/metabox-options.php:266
+msgid "Gallery source"
+msgstr ""
+
+#: framework/settings/theme-options.php:14
+#: framework/settings/theme-options.php:17
+#: widgets/review-years/Review_Years_Widget.php:59
+#: shortcode/ovic_banner/config/elementor.php:41
+#: shortcode/ovic_button/config/elementor.php:40
+#: shortcode/ovic_posts/config/elementor.php:39
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:41
+#: shortcode/ovic_showcase/config/elementor.php:38
+#: shortcode/ovic_slide/config/elementor.php:39
+#: shortcode/ovic_testimonial/config/elementor.php:40
+#: shortcode/ovic_title/config/elementor.php:39
+#: shortcode/ovic_trainingprogram/config/elementor.php:41
+#: shortcode/ovic_whychooseus/config/elementor.php:40
+msgid "General"
+msgstr "Cài đặt chung"
+
+#: framework/woo-functions.php:271
+#: framework/widgets/class-theme-widget-featured-products.php:79
+msgid "Get details"
+msgstr ""
+
+#: content-none.php:8
+msgid "Get started here"
+msgstr ""
+
+#: framework/theme-functions.php:724
+msgid "Giấy giới thiệu"
+msgstr ""
+
+#: framework/theme-functions.php:723
+msgid "Giấy mời"
+msgstr ""
+
+#: framework/theme-functions.php:725
+msgid "Giấy nghỉ phép"
+msgstr ""
+
+#: framework/theme-functions.php:722
+msgid "Giấy ủy quyền"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:73
+msgid "Good"
+msgstr ""
+
+#: framework/settings/metabox-options.php:356
+msgid "Google Docs"
+msgstr ""
+
+#: framework/visual-composer.php:336
+msgid "Gray filter"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:52
+#: shortcode/ovic_posts/config/elementor.php:49
+msgid "Grid"
+msgstr "Lưới"
+
+#: framework/visual-composer.php:620
+msgid "Grid Bootstrap"
+msgstr "Lưới boostrap"
+
+#: framework/settings/theme-options.php:448
+msgid "Grid Columns"
+msgstr "Lưới các cột"
+
+#: framework/theme-functions.php:358
+msgid "Guest"
+msgstr ""
+
+#: framework/settings/theme-options.php:228
+msgid "Header Sticky"
+msgstr ""
+
+#: framework/visual-composer.php:655
+msgid "Height"
+msgstr "Chiều cao"
+
+#: framework/widgets/class-theme-widget-product-categories.php:69
+msgid "Hide empty categories"
+msgstr ""
+
+#: framework/settings/metabox-options.php:28
+msgid "Hide Page Breadcrumbs"
+msgstr ""
+
+#: footer.php:29 framework/classes/breadcrumbs.php:218
+msgid "Home"
+msgstr "Trang chủ"
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:76
+msgid "Hot News"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:23
+msgid "Hotline"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:70
+msgid "Hotline:"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:694
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:128
+msgid "Hover Background Color"
+msgstr "Màu nền khi hover"
+
+#: shortcode/ovic_button/config/elementor.php:112
+msgid "Hover Color"
+msgstr "Màu khi hover"
+
+#: framework/visual-composer.php:770
+msgid "How much items per page to show"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://ictu.edu.vn/"
+msgstr ""
+
+#: framework/theme-functions.php:710
+msgid "Hướng dẫn"
+msgstr ""
+
+#: framework/theme-functions.php:718
+msgid "Hợp đồng"
+msgstr ""
+
+#: framework/visual-composer.php:198 framework/visual-composer.php:212
+#: framework/visual-composer.php:227 framework/visual-composer.php:243
+#: framework/visual-composer.php:259 framework/visual-composer.php:274
+#: framework/visual-composer.php:290 framework/visual-composer.php:306
+#: framework/visual-composer.php:364 framework/settings/theme-options.php:255
+#: framework/settings/theme-options.php:263
+msgid "Icon"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:175
+msgid "icon"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:194
+msgid "icon 2"
+msgstr ""
+
+#: framework/visual-composer.php:171
+msgid "Icon library"
+msgstr ""
+
+#: framework/settings/theme-options.php:706
+msgid "Icon Social"
+msgstr ""
+
+#. Name of the theme
+msgid "ICTU"
+msgstr ""
+
+#: framework/visual-composer.php:520
+msgid "ID"
+msgstr ""
+
+#: framework/visual-composer.php:389
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: framework/visual-composer.php:70 framework/visual-composer.php:181
+#: framework/visual-composer.php:189 framework/visual-composer.php:378
+#: framework/settings/theme-options.php:256
+#: framework/settings/theme-options.php:270
+#: shortcode/ovic_banner/config/elementor.php:66
+#: shortcode/ovic_showcase/config/elementor.php:47
+msgid "Image"
+msgstr "Hình ảnh"
+
+#: framework/visual-composer.php:328
+msgid "Image Effect"
+msgstr "Hiệu ứng"
+
+#: framework/visual-composer.php:637
+msgid "Image size"
+msgstr "Kích thước hình ảnh"
+
+#: framework/visual-composer.php:673 framework/settings/theme-options.php:386
+#: framework/settings/theme-options.php:497
+msgid "Infinite Scrolling"
+msgstr ""
+
+#: framework/visual-composer.php:397
+msgid "Intn: Megamenu Container"
+msgstr ""
+
+#: framework/visual-composer.php:416
+msgid "Intn: Megamenu items"
+msgstr ""
+
+#: framework/visual-composer.php:628
+msgid "Item Style"
+msgstr ""
+
+#: framework/visual-composer.php:441
+msgid "Items"
+msgstr ""
+
+#: framework/settings/theme-options.php:625
+msgid "Items Columns"
+msgstr ""
+
+#: framework/settings/theme-options.php:636
+msgid "Items Per Page"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:123
+msgid "Job Title"
+msgstr ""
+
+#: framework/theme-functions.php:698
+#: shortcode/ovic_documents/ovic_documents.php:12
+msgid "Khác"
+msgstr ""
+
+#: framework/theme-functions.php:712
+msgid "Kế hoạch"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:117
+#: shortcode/ovic_button/config/elementor.php:62
+msgid "Label"
+msgstr "Nhan đề"
+
+#: framework/settings/helpers.php:728 framework/settings/helpers.php:768
+msgid "Latest Posts"
+msgstr "Những bài viết mới nhất"
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:24
+#: shortcode/ovic_slide/config/elementor.php:47
+#: shortcode/ovic_testimonial/config/elementor.php:152
+msgid "Layout"
+msgstr "Giao diện"
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:26
+#: shortcode/ovic_slide/config/elementor.php:51
+msgid "Layout 01"
+msgstr "Giao diện kiểu 01"
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:27
+msgid "Layout 02"
+msgstr "Giao diện kiểu 02"
+
+#: shortcode/ovic_slide/config/elementor.php:226
+msgid "Lazy load"
+msgstr "Tải lazy"
+
+#. %s is product title
+#: woocommerce/single-product-reviews.php:43
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: framework/visual-composer.php:177
+msgid "Linecons"
+msgstr ""
+
+#: widgets/review-years/Review_Years_Widget.php:97
+#: shortcode/ovic_banner/config/elementor.php:86
+#: shortcode/ovic_banner/config/elementor.php:128
+#: shortcode/ovic_button/config/elementor.php:72
+#: shortcode/ovic_showcase/config/elementor.php:67
+#: shortcode/ovic_slide/config/elementor.php:83
+#: shortcode/ovic_trainingprogram/config/elementor.php:119
+msgid "Link"
+msgstr "Đường dẫn"
+
+#: framework/visual-composer.php:596
+msgid "Link Button"
+msgstr "Link của nút bấm"
+
+#: framework/visual-composer.php:606
+msgid "Link Show All"
+msgstr "Đường dẫn của nut xem tất cả"
+
+#: framework/settings/theme-options.php:700
+msgid "Link Social"
+msgstr "Đường dẫn mạng xã hội"
+
+#: shortcode/ovic_banner/config/elementor.php:139
+msgid "Link View More"
+msgstr "Link xem thêm"
+
+#: shortcode/ovic_posts/config/elementor.php:50
+#: shortcode/ovic_trainingprogram/config/elementor.php:95
+msgid "List"
+msgstr "Danh sách"
+
+#: shortcode/ovic_whychooseus/config/elementor.php:134
+msgid "List Elements"
+msgstr "Danh sách các phần tử"
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:15
+#: framework/widgets/class-theme-widget-featured-posts.php:15
+msgid "List featured posts in category"
+msgstr "Danh sách những bài viết nổi bật trong danh mục"
+
+#: framework/widgets/class-theme-widget-featured-products.php:15
+msgid "List featured products"
+msgstr ""
+
+#: framework/visual-composer.php:794
+msgid "List of product taxonomy attribute"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-related-posts.php:14
+msgid "List related posts"
+msgstr "Danh sách các bài viết liên quan"
+
+#: shortcode/ovic_showcase/config/elementor.php:77
+#: shortcode/ovic_showcase/config/elementor.php:78
+msgid "List show case"
+msgstr "Danh sách"
+
+#: shortcode/ovic_trainingprogram/config/elementor.php:49
+msgid "List type"
+msgstr ""
+
+#: framework/visual-composer.php:672 framework/settings/theme-options.php:385
+#: framework/settings/theme-options.php:496
+msgid "Load More"
+msgstr ""
+
+#: framework/blog-functions.php:116
+msgid "Load more"
+msgstr ""
+
+#: framework/blog-functions.php:117
+msgid "Loading"
+msgstr ""
+
+#: framework/theme-functions.php:359
+msgid "Login"
+msgstr ""
+
+#: framework/settings/theme-options.php:32
+msgid "Logo"
+msgstr ""
+
+#: framework/theme-functions.php:370
+msgid "Logout"
+msgstr ""
+
+#: framework/settings/metabox-options.php:326
+msgid "Loại văn bản"
+msgstr ""
+
+#: framework/settings/theme-options.php:53
+msgid "Main Color"
+msgstr "Màu chủ đạo"
+
+#: framework/settings/theme-options.php:60
+msgid "Main Color Hover"
+msgstr "Màu chủ đạo khi hover"
+
+#: framework/settings/theme-options.php:22
+msgid "Main Container"
+msgstr "Kích thước trang"
+
+#: framework/settings/helpers.php:995
+msgid "Main Menu"
+msgstr "Ictu Menu"
+
+#: framework/visual-composer.php:179
+msgid "Material"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:41
+#: framework/widgets/class-theme-widget-featured-posts.php:28
+#: framework/widgets/class-theme-widget-featured-products.php:23
+#: framework/widgets/class-theme-widget-related-posts.php:35
+msgid "Max Post Number"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-product-categories.php:74
+msgid "Maximum depth"
+msgstr ""
+
+#: footer.php:41
+msgid "Menu"
+msgstr ""
+
+#: framework/settings/theme-options.php:235
+msgid "Menu Item Settings"
+msgstr ""
+
+#: framework/visual-composer.php:526
+msgid "Menu order"
+msgstr ""
+
+#: templates-parts/header-user.php:82
+msgctxt "meta widget link text"
+msgid "WordPress.org"
+msgstr ""
+
+#. Minute archive title. %s is the minute time format.
+#: framework/classes/breadcrumbs.php:226
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:658
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:676
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: shortcode/ovic_trainingprogram/config/elementor.php:53
+msgid "Missions And Vision"
+msgstr ""
+
+#: framework/visual-composer.php:523
+msgid "Modified"
+msgstr ""
+
+#: framework/visual-composer.php:178
+msgid "Mono Social"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:713 framework/classes/breadcrumbs.php:774
+#: framework/classes/breadcrumbs.php:1098
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: framework/theme-functions.php:699
+msgid "Mẫu biểu"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:55
+#: framework/widgets/class-theme-widget-product-categories.php:48
+#: framework/widgets/class-theme-widget-support-systems.php:37
+#: shortcode/ovic_testimonial/config/elementor.php:114
+#: shortcode/ovic_trainingprogram/config/elementor.php:110
+msgid "Name"
+msgstr ""
+
+#: comments.php:24
+msgid "Name *"
+msgstr ""
+
+#: framework/settings/theme-options.php:323
+msgid "Name Of Chief Editor"
+msgstr ""
+
+#: framework/visual-composer.php:834
+msgid "Nav Hover Square"
+msgstr ""
+
+#: framework/visual-composer.php:835
+msgid "Nav on top"
+msgstr ""
+
+#: framework/visual-composer.php:833
+msgid "Nav Square"
+msgstr ""
+
+#: framework/visual-composer.php:836
+msgid "Nav Square on top"
+msgstr ""
+
+#: framework/visual-composer.php:837
+msgid "Nav style 01"
+msgstr ""
+
+#: framework/visual-composer.php:838
+msgid "Nav style 02"
+msgstr ""
+
+#: framework/visual-composer.php:839
+msgid "Nav style 03"
+msgstr ""
+
+#: framework/visual-composer.php:840
+msgid "Nav Tools2"
+msgstr ""
+
+#: framework/visual-composer.php:851
+msgid "Navigation offset top"
+msgstr ""
+
+#: framework/visual-composer.php:829
+msgid "Navigation style"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:97
+msgid "New Banner"
+msgstr ""
+
+#: comments.php:88 framework/blog-functions.php:102
+msgid "Next"
+msgstr ""
+
+#: framework/blog-functions.php:156
+msgid "Next Post"
+msgstr ""
+
+#: framework/theme-functions.php:705
+msgid "Nghị quyết"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/ovic_reviewtwentyyears.php:36
+msgid "Ngành đào tạo"
+msgstr ""
+
+#: framework/settings/metabox-options.php:335
+msgid "Ngày Ký"
+msgstr ""
+
+#: framework/settings/metabox-options.php:342
+msgid "Người Ký"
+msgstr ""
+
+#: framework/visual-composer.php:865
+#: shortcode/ovic_posts/config/elementor.php:82
+#: shortcode/ovic_posts/config/elementor.php:96
+#: shortcode/ovic_slide/config/elementor.php:116
+#: shortcode/ovic_slide/config/elementor.php:129
+#: shortcode/ovic_slide/config/elementor.php:142
+#: shortcode/ovic_slide/config/elementor.php:155
+#: shortcode/ovic_slide/config/elementor.php:168
+#: shortcode/ovic_slide/config/elementor.php:181
+#: shortcode/ovic_slide/config/elementor.php:194
+#: shortcode/ovic_slide/config/elementor.php:217
+#: shortcode/ovic_slide/config/elementor.php:229
+msgid "No"
+msgstr ""
+
+#: framework/blog-functions.php:477
+msgid "No category"
+msgstr "Không có danh mục"
+
+#: framework/widgets/class-theme-widget-product-categories.php:215
+msgid "No product categories exist."
+msgstr ""
+
+#: framework/theme-functions.php:207 framework/settings/helpers.php:637
+msgid "No Product Found"
+msgstr ""
+
+#: framework/theme-functions.php:137 framework/visual-composer.php:331
+#: framework/visual-composer.php:619 framework/visual-composer.php:670
+#: framework/settings/helpers.php:542 framework/settings/theme-options.php:542
+msgid "None"
+msgstr ""
+
+#: framework/visual-composer.php:332
+msgid "Normal Effect"
+msgstr ""
+
+#: framework/visual-composer.php:333
+msgid "Normal Effect Dark"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:75
+msgid "Not that bad"
+msgstr ""
+
+#: framework/visual-composer.php:757
+msgid ""
+"Note: If you want to narrow output, select Brand(s) above. Only selected "
+"Brand will be displayed."
+msgstr ""
+
+#: framework/visual-composer.php:740
+msgid ""
+"Note: If you want to narrow output, select category(s) above. Only selected "
+"categories will be displayed."
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:92
+msgid "Number"
+msgstr ""
+
+#: shortcode/ovic_posts/config/elementor.php:70
+msgid "Number of article"
+msgstr "Số lượng bài viết"
+
+#: shortcode/ovic_testimonial/config/elementor.php:154
+msgid "One slide"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:115
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: framework/widgets/class-theme-widget-product-categories.php:64
+msgid "Only show children of the current category"
+msgstr ""
+
+#: framework/visual-composer.php:174
+msgid "Open Iconic"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-featured-products.php:29
+msgid "Order"
+msgstr ""
+
+#: framework/visual-composer.php:774
+#: framework/widgets/class-theme-widget-product-categories.php:45
+msgid "Order by"
+msgstr ""
+
+#: framework/settings/theme-options.php:341
+msgid "Organizations Logo"
+msgstr ""
+
+#: framework/settings/theme-options.php:44
+msgid "Organize Name"
+msgstr ""
+
+#: framework/visual-composer.php:348
+msgid "Overlay Cross"
+msgstr ""
+
+#: framework/visual-composer.php:349
+msgid "Overlay Horizontal"
+msgstr ""
+
+#: framework/visual-composer.php:347
+msgid "Overlay Plus"
+msgstr ""
+
+#: framework/visual-composer.php:350
+msgid "Overlay Vertical"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:16
+msgid "Ovic Banner"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:15
+msgid "Ovic Button"
+msgstr "Ovic nút bấm"
+
+#: shortcode/ovic_documents/config/elementor.php:15
+msgid "Ovic Document List"
+msgstr ""
+
+#: shortcode/ovic_posts/config/elementor.php:14
+msgid "Ovic Posts"
+msgstr "Ovic bài đăng"
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:16
+msgid "Ovic Review Years"
+msgstr "Ovic điểm lại các năm"
+
+#: shortcode/ovic_showcase/config/elementor.php:14
+msgid "Ovic Showcase"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:15
+msgid "Ovic Slide"
+msgstr ""
+
+#. Author of the theme
+msgid "Ovic team"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:15
+msgid "Ovic Testimonials"
+msgstr ""
+
+#: shortcode/ovic_title/config/elementor.php:15
+msgid "Ovic Title"
+msgstr ""
+
+#: shortcode/ovic_trainingprogram/config/elementor.php:16
+msgid "Ovic Training Program"
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:15
+msgid "Ovic Why Choose Us"
+msgstr ""
+
+#: framework/visual-composer.php:573
+msgid "Ovic: Products"
+msgstr ""
+
+#: framework/visual-composer.php:621
+msgid "Owl Carousel"
+msgstr "Than trược Owl"
+
+#. %s is the page number.
+#: framework/classes/breadcrumbs.php:224
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: framework/settings/metabox-options.php:84
+#: framework/settings/theme-options.php:72
+msgid "Page banner"
+msgstr ""
+
+#: framework/settings/metabox-options.php:16
+msgid "Page Options"
+msgstr ""
+
+#: index.php:62 page.php:48 framework/settings/metabox-options.php:49
+msgid "Page Sidebar"
+msgstr ""
+
+#: page.php:29 framework/blog-functions.php:359
+msgid "Pages:"
+msgstr ""
+
+#: framework/visual-composer.php:667 framework/settings/theme-options.php:384
+#: framework/settings/theme-options.php:495
+msgid "Pagination"
+msgstr ""
+
+#: framework/settings/metabox-options.php:303
+msgid "Participants"
+msgstr ""
+
+#: framework/visual-composer.php:765
+msgid "Per page"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:72
+msgid "Perfect"
+msgstr ""
+
+#: framework/theme-functions.php:728
+msgid "Phiếu báo"
+msgstr ""
+
+#: framework/theme-functions.php:727
+msgid "Phiếu chuyển"
+msgstr ""
+
+#: framework/theme-functions.php:726
+msgid "Phiếu gửi"
+msgstr ""
+
+#: framework/settings/theme-options.php:305
+msgid "Phone"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:42
+msgid "Phone number"
+msgstr ""
+
+#: framework/theme-functions.php:713
+msgid "Phương án"
+msgstr ""
+
+#: framework/settings/metabox-options.php:287
+msgid "Place"
+msgstr ""
+
+#: searchform.php:16
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr "Tìm kiếm&hellip;"
+
+#: framework/visual-composer.php:341
+msgid "Plus Zoom"
+msgstr ""
+
+#: framework/visual-composer.php:530
+msgid "Popularity"
+msgstr ""
+
+#: framework/visual-composer.php:429
+msgid "Position"
+msgstr ""
+
+#: framework/visual-composer.php:437
+msgid "Position of the menu"
+msgstr ""
+
+#: framework/settings/metabox-options.php:311
+msgid "Post banner"
+msgstr "Ảnh của bài đăng"
+
+#: templates/blog/blog-shortcode-bak/content-blog-style-07.php:14
+msgid "Post by"
+msgstr ""
+
+#: framework/visual-composer.php:531
+msgid "Post In"
+msgstr ""
+
+#: framework/settings/metabox-options.php:231
+msgid "Post Options"
+msgstr "Cài đặt bài đăng"
+
+#: framework/settings/theme-options.php:394
+msgid "Post Single"
+msgstr ""
+
+#: framework/settings/theme-options.php:399
+msgid "Post Single Sidebar"
+msgstr ""
+
+#: framework/settings/metabox-options.php:243
+msgid "Post Type"
+msgstr "Kiểu bài đăng"
+
+#: functions.php:120
+msgid "Post Widget Area"
+msgstr ""
+
+#: templates-parts/header-user.php:81
+msgid ""
+"Powered by WordPress, state-of-the-art semantic personal publishing platform."
+msgstr ""
+
+#: comments.php:87 framework/blog-functions.php:101
+msgid "Prev"
+msgstr ""
+
+#: templates-parts/popup-newsletter.php:46
+msgid "PREVENT THIS POP-UP"
+msgstr ""
+
+#: framework/blog-functions.php:145
+msgid "Previous Post"
+msgstr ""
+
+#: framework/visual-composer.php:528
+msgid "Price: high to low"
+msgstr ""
+
+#: framework/visual-composer.php:527
+msgid "Price: low to high"
+msgstr ""
+
+#: functions.php:66
+msgid "Primary Menu"
+msgstr ""
+
+#: framework/visual-composer.php:744
+msgid "Product Brand"
+msgstr ""
+
+#: framework/visual-composer.php:727
+msgid "Product Categories"
+msgstr ""
+
+#: framework/settings/theme-options.php:540
+msgid "Product Image Hover"
+msgstr ""
+
+#: framework/visual-composer.php:616
+msgid "Product list style"
+msgstr ""
+
+#: framework/visual-composer.php:676 framework/visual-composer.php:682
+#: framework/visual-composer.php:706 framework/visual-composer.php:718
+#: framework/visual-composer.php:739 framework/visual-composer.php:756
+#: framework/visual-composer.php:769 framework/visual-composer.php:777
+#: framework/visual-composer.php:785 framework/visual-composer.php:793
+#: framework/visual-composer.php:801
+msgid "Product Options"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:39
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: framework/visual-composer.php:698 framework/visual-composer.php:710
+#: framework/woo-functions.php:319
+#: framework/widgets/class-theme-widget-product-categories.php:206
+msgid "Products"
+msgstr ""
+
+#: framework/visual-composer.php:700
+msgid "Products Attribute"
+msgstr ""
+
+#: framework/visual-composer.php:699
+msgid "Products Category"
+msgstr ""
+
+#: framework/settings/theme-options.php:554
+msgid "Products Newness"
+msgstr ""
+
+#: framework/visual-composer.php:701
+msgid "Products Related"
+msgstr ""
+
+#: shortcode/ovic_trainingprogram/config/elementor.php:52
+#: shortcode/ovic_trainingprogram/config/elementor.php:128
+msgid "Programs"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:59
+msgid "Provider"
+msgstr ""
+
+#: framework/visual-composer.php:647 framework/visual-composer.php:658
+msgid "px"
+msgstr ""
+
+#: framework/settings/metabox-options.php:259
+msgid "Quote Text"
+msgstr "Trích dẫn"
+
+#: framework/theme-functions.php:704
+msgid "Quy chế"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/ovic_reviewtwentyyears.php:37
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:139
+msgid "Quy mô đào tạo ĐHCQ"
+msgstr ""
+
+#: framework/theme-functions.php:700
+msgid "Quy trình"
+msgstr ""
+
+#: framework/theme-functions.php:703
+msgid "Quy định"
+msgstr ""
+
+#: framework/theme-functions.php:702
+msgid "Quyết định"
+msgstr ""
+
+#: framework/visual-composer.php:524
+msgid "Random"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:71
+msgid "Rate&hellip;"
+msgstr ""
+
+#: framework/blog-functions.php:251
+msgid "Read More"
+msgstr ""
+
+#: templates/blog/blog-shortcode/content-blog-style-09.php:30
+#: templates/blog/blog-shortcode/content-blog-style-10.php:28
+#: templates/blog/blog-shortcode/content-blog-style-11.php:22
+msgid "Read more"
+msgstr ""
+
+#: content-none.php:7
+msgid "Ready to publish your first post?"
+msgstr ""
+
+#: framework/visual-composer.php:693
+msgid "Recent Products"
+msgstr ""
+
+#: framework/blog-functions.php:177
+msgid "Related Posts"
+msgstr ""
+
+#: framework/settings/theme-options.php:599
+msgid "Related Products"
+msgstr ""
+
+#: framework/woo-functions.php:306
+msgid "Related products"
+msgstr ""
+
+#: framework/settings/theme-options.php:776
+msgid "Reset"
+msgstr ""
+
+#: 404.php:26
+msgid "Return to home"
+msgstr ""
+
+#: widgets/review-years/Review_Years_Widget.php:15
+msgid "Review Years"
+msgstr "Năm điểm lại"
+
+#: woocommerce/single-product-reviews.php:126
+#: widgets/review-years/Review_Years_Widget.php:106
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:166
+msgid "Reviews"
+msgstr ""
+
+#: framework/visual-composer.php:339
+msgid "Rotate Left In"
+msgstr ""
+
+#: framework/visual-composer.php:340
+msgid "Rotate Right In"
+msgstr ""
+
+#: framework/visual-composer.php:809
+msgid "Rows space"
+msgstr ""
+
+#: templates-parts/header-user.php:51 templates-parts/header-user.php:62
+msgid "RSS"
+msgstr ""
+
+#: framework/visual-composer.php:695
+msgid "Sale Products"
+msgstr ""
+
+#: comments.php:33
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: footer.php:33 searchform.php:18
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: templates-parts/header-search.php:4
+msgid "Search here"
+msgstr "Tìm kiếm"
+
+#: framework/settings/helpers.php:791
+msgid "Search Results"
+msgstr "Kết quả tìm kiếm"
+
+#: content-none.php:11
+msgid "Search results"
+msgstr "Kết quả tìm kiếm"
+
+#. %s is the search query. The HTML entities are opening and closing curly quotes.
+#: framework/classes/breadcrumbs.php:222
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Kết quả tìm kiếm cho &#8220;%s&#8221;"
+
+#: framework/settings/helpers.php:750
+#, php-format
+msgid "Search Results for: \"%s\""
+msgstr "Search results for &#8220;%s&#8221;"
+
+#: framework/visual-composer.php:640
+msgid "Select a size for product"
+msgstr ""
+
+#: framework/visual-composer.php:633
+msgid "Select a style for product item"
+msgstr ""
+
+#: framework/visual-composer.php:778
+#, php-format
+msgid "Select how to sort retrieved products. More at %s."
+msgstr ""
+
+#: framework/visual-composer.php:199 framework/visual-composer.php:223
+#: framework/visual-composer.php:239 framework/visual-composer.php:255
+#: framework/visual-composer.php:286 framework/visual-composer.php:302
+#: framework/visual-composer.php:318 framework/visual-composer.php:365
+msgid "Select icon from library."
+msgstr ""
+
+#: framework/visual-composer.php:185
+msgid "Select icon library."
+msgstr ""
+
+#: framework/settings/theme-options.php:439
+msgid "Select layout for shop product, product category archive."
+msgstr ""
+
+#: framework/visual-composer.php:750
+msgid "Select Products Brand"
+msgstr ""
+
+#: framework/visual-composer.php:733
+msgid "Select Products Category"
+msgstr ""
+
+#: framework/settings/theme-options.php:363
+#: framework/settings/theme-options.php:400
+msgid "Select sidebar position on Blog."
+msgstr ""
+
+#: framework/settings/metabox-options.php:35
+msgid "Select sidebar position on Page."
+msgstr ""
+
+#: framework/settings/theme-options.php:467
+#: framework/settings/theme-options.php:580
+msgid "Select sidebar position on Shop Page."
+msgstr ""
+
+#: framework/visual-composer.php:507
+#: shortcode/ovic_banner/config/elementor.php:49
+#: shortcode/ovic_button/config/elementor.php:48
+#: shortcode/ovic_posts/config/elementor.php:47
+#: shortcode/ovic_testimonial/config/elementor.php:48
+msgid "Select style"
+msgstr "Chọn kiểu"
+
+#: framework/settings/theme-options.php:389
+msgid "Select style pagination on blog page."
+msgstr "Chọn kiểu thanh điều hướng cho trang danh mục bài viết"
+
+#: framework/settings/theme-options.php:500
+msgid "Select style pagination on shop page."
+msgstr "Chọn kiểu thanh điều hướng trong trang sản phẩm"
+
+#: framework/settings/metabox-options.php:85
+#: framework/settings/theme-options.php:73
+msgid "Setting banner for this Page"
+msgstr ""
+
+#: framework/settings/metabox-options.php:312
+msgid "Setting banner for this post"
+msgstr "Cài đặt ảnh cho bài đăng"
+
+#: framework/settings/theme-options.php:33
+msgid "Setting Logo For Site"
+msgstr ""
+
+#: framework/settings/metabox-options.php:67
+msgid "Setting page banner"
+msgstr ""
+
+#: framework/settings/theme-options.php:432
+msgid "Shop Banner"
+msgstr ""
+
+#: framework/settings/theme-options.php:438
+msgid "Shop Layout"
+msgstr ""
+
+#: framework/settings/theme-options.php:427
+msgid "Shop Page"
+msgstr ""
+
+#: framework/settings/theme-options.php:493
+msgid "Shop Pagination"
+msgstr ""
+
+#: framework/settings/theme-options.php:461
+msgid "Shop Per Page"
+msgstr ""
+
+#: framework/settings/theme-options.php:535
+msgid "Shop Products"
+msgstr ""
+
+#: sidebar-shop.php:16 framework/settings/theme-options.php:466
+msgid "Shop Sidebar"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-product-categories.php:59
+msgid "Show hierarchy"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-product-categories.php:54
+msgid "Show product counts"
+msgstr ""
+
+#: footer.php:37
+msgid "Sidebar"
+msgstr ""
+
+#: framework/theme-functions.php:659
+msgid "Sidebar Areal"
+msgstr "Sidebar"
+
+#: framework/settings/theme-options.php:375
+msgid "Sidebar Used for Blog"
+msgstr ""
+
+#: framework/settings/theme-options.php:412
+msgid "Sidebar Used for Post"
+msgstr ""
+
+#: framework/settings/theme-options.php:479
+msgid "Sidebar Used for Shop"
+msgstr ""
+
+#: framework/settings/theme-options.php:592
+msgid "Sidebar used for single product"
+msgstr ""
+
+#: framework/settings/theme-options.php:486
+msgid "Sidebar Used for Vendor"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:51
+msgid "Single"
+msgstr ""
+
+#: framework/settings/metabox-options.php:34
+msgid "Single Page Sidebar Position"
+msgstr ""
+
+#: framework/settings/theme-options.php:564
+msgid "Single Product"
+msgstr ""
+
+#: framework/settings/theme-options.php:579
+msgid "Single Product Layout"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:32
+msgid "Skype Supporters"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:72
+msgid "Slide For Mobile"
+msgstr ""
+
+#: framework/settings/theme-options.php:545
+msgid "Slide Image"
+msgstr "Hình ảnh"
+
+#: shortcode/ovic_slide/config/elementor.php:62
+msgid "Slide On Desktop"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:106
+msgid "Slide Settings"
+msgstr "Cài đặt slide"
+
+#: shortcode/ovic_slide/config/elementor.php:92
+msgid "Slides"
+msgstr ""
+
+#: framework/settings/theme-options.php:682
+#: framework/settings/theme-options.php:687
+msgid "Social"
+msgstr ""
+
+#: framework/settings/theme-options.php:689
+msgid "Social Settings"
+msgstr ""
+
+#: framework/visual-composer.php:782
+msgid "Sort order"
+msgstr ""
+
+#: framework/woo-functions.php:79
+msgid "Specifications"
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:104
+msgid "Star"
+msgstr ""
+
+#: framework/settings/theme-options.php:38
+msgid "Sticky Logo"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:50
+msgid "Style 01"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:166
+msgid "Subject"
+msgstr ""
+
+#: comments.php:39
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:47
+msgid "Submit Review"
+msgstr ""
+
+#. %s is product title
+#: woocommerce/single-product-reviews.php:41
+msgid "Submit your review"
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:114
+msgid "Suffix"
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:101
+msgid "Suffix Style"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:65
+msgid "Support systems"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:130
+msgid "Số ngành đào tạo"
+msgstr ""
+
+#: framework/settings/metabox-options.php:319
+msgid "Số văn bản"
+msgstr ""
+
+#: framework/visual-composer.php:690
+msgid "Target"
+msgstr ""
+
+#: framework/visual-composer.php:802
+msgid "Taxonomy values"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:50
+msgid "Testimonial"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:77
+#: shortcode/ovic_showcase/config/elementor.php:58
+#: shortcode/ovic_testimonial/config/elementor.php:185
+#: shortcode/ovic_title/config/elementor.php:48
+msgid "Text"
+msgstr "Chữ"
+
+#: shortcode/ovic_trainingprogram/config/elementor.php:85
+msgid "text"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:205
+msgid "Text 2"
+msgstr "Chữ 2"
+
+#: framework/settings/theme-options.php:67
+#: shortcode/ovic_title/config/elementor.php:55
+#: shortcode/ovic_whychooseus/config/elementor.php:73
+msgid "Text Color"
+msgstr "Màu chữ"
+
+#: framework/settings/theme-options.php:39
+msgid "The logo shows on scroll"
+msgstr ""
+
+#: 404.php:21
+msgid "The page you've requested is not available."
+msgstr ""
+
+#: framework/visual-composer.php:598 framework/visual-composer.php:608
+msgid "The text of link"
+msgstr "Nhan đề của đường dẫn"
+
+#: framework/settings/theme-options.php:45
+msgid "The text showed near by the logo"
+msgstr "Dòng chữ được hiển thị cạnh logo"
+
+#: framework/settings/theme-options.php:793
+msgid "Theme Options"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-featured-posts-by-category.php:17
+#: framework/widgets/class-theme-widget-featured-posts.php:17
+msgid "Theme: Featured Posts"
+msgstr "Theme: Bài viết nổi bật"
+
+#: framework/widgets/class-theme-widget-featured-products.php:17
+msgid "Theme: Featured Products"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-product-categories.php:40
+msgid "Theme: Product Categories"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-related-posts.php:16
+msgid "Theme: Related Posts"
+msgstr ""
+
+#: framework/widgets/class-theme-widget-support-systems.php:17
+msgid "Theme: Support Systems"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:152
+msgid "There are no reviews yet."
+msgstr ""
+
+#: content-none.php:15
+msgid "This archive has no posts"
+msgstr "Không có bài viết trong chuyên mục hiện tại"
+
+#: shortcode/ovic_posts/templates/style-02.php:10
+#: shortcode/ovic_posts/templates/style-03.php:11
+msgid "tháng"
+msgstr ""
+
+#: framework/theme-functions.php:708
+msgid "Thông báo"
+msgstr ""
+
+#: framework/theme-functions.php:706
+msgid "Thông cáo"
+msgstr ""
+
+#: framework/settings/metabox-options.php:295
+msgid "Time"
+msgstr ""
+
+#: framework/visual-composer.php:522 framework/visual-composer.php:580
+#: framework/settings/theme-options.php:241
+#: framework/widgets/class-theme-widget-featured-posts.php:24
+#: framework/widgets/class-theme-widget-related-posts.php:23
+#: shortcode/ovic_trainingprogram/config/elementor.php:74
+#: shortcode/ovic_whychooseus/config/elementor.php:48
+msgid "Title"
+msgstr ""
+
+#: framework/settings/theme-options.php:694
+msgid "Title Social"
+msgstr ""
+
+#: framework/settings/theme-options.php:233
+msgid "Top Left Menu"
+msgstr ""
+
+#: framework/visual-composer.php:697
+msgid "Top Rated Products"
+msgstr ""
+
+#: shortcode/ovic_testimonial/config/elementor.php:155
+msgid "Two Slide"
+msgstr ""
+
+#: framework/visual-composer.php:175
+msgid "Typicons"
+msgstr ""
+
+#: framework/settings/theme-options.php:743
+msgid "Typography"
+msgstr ""
+
+#: framework/settings/theme-options.php:748
+msgid "Typography of Body"
+msgstr ""
+
+#: templates-parts/blog-search.php:10
+msgid "Tất cả thể loại"
+msgstr ""
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:121
+msgid "Tỉ lệ giảng viên trình độ cao"
+msgstr ""
+
+#: framework/theme-functions.php:709
+msgid "Tờ trình"
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:145
+#: shortcode/ovic_button/config/elementor.php:158
+msgid "Unit px"
+msgstr ""
+
+#: framework/settings/theme-options.php:293
+msgid "University Name"
+msgstr ""
+
+#: framework/settings/theme-options.php:247
+msgid "Url"
+msgstr ""
+
+#: framework/visual-composer.php:582
+msgid "Use {text} for highlight text."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:76
+msgid "Very poor"
+msgstr ""
+
+#: framework/settings/metabox-options.php:247
+#: shortcode/ovic_banner/config/elementor.php:54
+msgid "Video"
+msgstr "Video"
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:92
+msgid "Video Caption"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:170
+msgid "Video Height"
+msgstr "Chiều cao của video"
+
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:73
+msgid "Video Poster"
+msgstr ""
+
+#: framework/settings/metabox-options.php:272
+msgid "Video source"
+msgstr "Nguồn video"
+
+#: shortcode/ovic_banner/config/elementor.php:150
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:82
+msgid "Video Src"
+msgstr "Nguồn video"
+
+#: shortcode/ovic_banner/config/elementor.php:160
+msgid "Video Width"
+msgstr "Chiều dài của video"
+
+#: framework/visual-composer.php:671
+msgid "View All"
+msgstr "Xem tất cả"
+
+#: framework/blog-functions.php:225
+msgid "View all post by"
+msgstr ""
+
+#: framework/settings/enqueue.php:610
+msgid "Warning!"
+msgstr "Cảnh báo!"
+
+#: 404.php:20
+msgid "We are sorry."
+msgstr "Xin lỗi"
+
+#: content-none.php:10
+msgid "We couldn't find your content"
+msgstr "Chúng tôi không tìm thấy nội dung bạn yêu cầu"
+
+#: content-none.php:16
+msgid "We has no found your content"
+msgstr "Chúng tôi không tìm thấy nội dung bạn yêu cầu"
+
+#: comments.php:26
+msgid "Website"
+msgstr ""
+
+#. Weekly archive title. %s is the week date format.
+#: framework/classes/breadcrumbs.php:228
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:745
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: shortcode/ovic_whychooseus/config/elementor.php:50
+msgid "Why Choose Us"
+msgstr ""
+
+#: functions.php:111
+msgid "Widget Area"
+msgstr ""
+
+#: framework/visual-composer.php:644
+#: shortcode/ovic_button/config/elementor.php:144
+msgid "Width"
+msgstr "Chiều dài"
+
+#: framework/settings/theme-options.php:424
+msgid "WooCommerce"
+msgstr ""
+
+#: framework/visual-composer.php:778 framework/visual-composer.php:786
+msgid "WordPress codex page"
+msgstr ""
+
+#: shortcode/ovic_slide/config/elementor.php:152
+msgid "Wrap Around"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:87
+#: woocommerce/single-product-reviews.php:96
+msgid "Write your review here..."
+msgstr ""
+
+#: shortcode/ovic_button/config/elementor.php:63
+#: shortcode/ovic_posts/config/elementor.php:109
+msgid "Xem thêm"
+msgstr ""
+
+#: shortcode/ovic_banner/config/elementor.php:118
+msgid "Xem thêm tại"
+msgstr ""
+
+#: framework/classes/breadcrumbs.php:711 framework/classes/breadcrumbs.php:743
+#: framework/classes/breadcrumbs.php:772 framework/classes/breadcrumbs.php:800
+#: framework/classes/breadcrumbs.php:1092
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: widgets/review-years/Review_Years_Widget.php:69
+#: shortcode/ovic_reviewtwentyyears/config/elementor.php:51
+msgid "Years"
+msgstr "Danh sách năm"
+
+#: framework/visual-composer.php:866
+#: shortcode/ovic_posts/config/elementor.php:81
+#: shortcode/ovic_posts/config/elementor.php:95
+#: shortcode/ovic_slide/config/elementor.php:115
+#: shortcode/ovic_slide/config/elementor.php:128
+#: shortcode/ovic_slide/config/elementor.php:141
+#: shortcode/ovic_slide/config/elementor.php:154
+#: shortcode/ovic_slide/config/elementor.php:167
+#: shortcode/ovic_slide/config/elementor.php:180
+#: shortcode/ovic_slide/config/elementor.php:193
+#: shortcode/ovic_slide/config/elementor.php:216
+#: shortcode/ovic_slide/config/elementor.php:228
+msgid "Yes"
+msgstr ""
+
+#. %s opening and closing link tags respectively
+#: woocommerce/single-product-reviews.php:84
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a review."
+msgstr ""
+
+#: framework/blog-functions.php:273
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: framework/blog-functions.php:275
+msgid ""
+"Your comment is awaiting moderation. This is a preview, your comment will be "
+"visible after it has been approved."
+msgstr ""
+
+#: framework/settings/theme-options.php:544
+msgid "Zoom Image"
+msgstr "Phóng ảnh"
+
+#: templates-parts/header-user.php:17
+msgid "Đăng nhập"
+msgstr ""
+
+#: framework/theme-functions.php:714
+msgid "Đề án"
+msgstr ""

@@ -1,0 +1,26 @@
+.ovic-edit-link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+.ovic-edit-link a{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px 10px;
+    position: relative;
+    text-decoration: none !important;
+}
+.ovic-edit-link a::before{
+    position: absolute;
+    content: '';
+    bottom: 6px;
+    left: 10px;
+    right: 10px;
+}
+.ovic-edit-link a:hover::before{
+    border-top: 1px solid;
+}
