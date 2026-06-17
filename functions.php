@@ -466,6 +466,11 @@ require_once get_parent_theme_file_path( '/shortcodes/document.php' );
 //    var_dump('after_setup_theme', isset($shortcode_tags['ictu-slider']));
 //});
 /**
+ * Theme Updater
+ */
+require_once get_parent_theme_file_path( '/framework/theme-updater.php' );
+
+/**
  * Custom post type
  */
 require_once get_parent_theme_file_path( '/framework/custom-post-type/baochi/baochi.php' );
