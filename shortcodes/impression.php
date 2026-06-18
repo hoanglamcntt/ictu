@@ -58,18 +58,18 @@ function ictu_impression_shortcode( $atts )
                     'caption'  => $node['video_caption']
                 );
             }
-//            if ( !empty( $node['gallery'] ) ) {
-//                foreach ( explode( ",", $node['gallery'] ) as $gallery ) {
-//                    $data['galleries'][ $id ][] = array(
-//                        'id'       => $gallery,
-//                        'url'      => wp_get_attachment_image_url( $gallery, 'full' ),
-//                        'type'     => 'image',
-//                        'poster'   => '',
-//                        'provider' => '',
-//                        'caption'  => wp_get_attachment_caption( $gallery )
-//                    );
-//                }
-//            }
+            if ( !empty( $node['gallery'] ) ) {
+                foreach ( explode( ",", $node['gallery'] ) as $gallery ) {
+                    $data['galleries'][ $id ][] = array(
+                        'id'       => $gallery,
+                        'url'      => wp_get_attachment_image_url( $gallery, 'full' ),
+                        'type'     => 'image',
+                        'poster'   => '',
+                        'provider' => '',
+                        'caption'  => wp_get_attachment_caption( $gallery )
+                    );
+                }
+            }
 
             if ( $node['number'] ) {
                 $years[] = '<b class="' . $_y_class . '" data-element="' . $elm_id . '">' . esc_html( $node['number'] ) . '</b>';
